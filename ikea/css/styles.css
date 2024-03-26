@@ -25,12 +25,9 @@ nav {
 }
 .nav-container {
     display: flex;
-<<<<<<< HEAD
     margin: 8px 24px 24px;
-=======
     box-sizing: border-box;
     padding: 0 24px;
->>>>>>> 4ca9e2c1a13a62b68efa8efa8d879b0e8e69fd5b
     width: 100%;
     max-width: var(--box-container-max-width);
     border: 2px dotted black;
@@ -84,12 +81,7 @@ main {
     box-sizing: border-box;
     width: 100%;
     max-width: var(--box-container-max-width);
-<<<<<<< HEAD
-    margin: 0 8px 0 8px;
-    padding: 0px var(--container-spacing-desktop);
-=======
     padding: 0 24px;
->>>>>>> 4ca9e2c1a13a62b68efa8efa8d879b0e8e69fd5b
 }
 /* ---- inizio sezioni e box ----- ----*/
 .box-section {
