@@ -125,14 +125,14 @@ main {
     transition: 500ms transform ease;
     transform: translateX(-64px);
 }
-.items-dark {
+.box .items-dark, .box-fancy .items-dark {
     color: var(--color-text-darker);
     text-shadow: none;
 }
-.items-light {
+.box .items-light, .box-fancy .items-light {
     color: var(--color-text-light);
 }
-.items-light p {
+.box .items-light p, .box-fancy .items-light p {
     text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.7);
 }
 .box .bottom-items h2, .box-fancy .left-items h2 {
