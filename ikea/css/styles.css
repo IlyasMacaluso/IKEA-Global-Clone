@@ -1,7 +1,12 @@
 @import "root.css";
 @font-face {
-    font-family: "Noto IKEA";
-    src: url('https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-400.latin.647e877d.woff2') format('woff2');
+    font-family: "Noto IKEA Latin Bold";
+    src:
+        url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.eot?#iefix")
+            format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.woff2")
+            format("woff2"),
+        url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.woff") format("woff");
 }
 img,
 svg {
@@ -13,32 +18,32 @@ body {
     font-family: var(--ikea-font);
     background-color: var(--color-background);
 }
-
+h2 {
+    font-family: "Noto IKEA Latin Bold";
+}
 /*--- inizio nav e propri contenuti*/
 nav {
     display: flex;
-    justify-content: center;
-}
-.nav-container {
     display: flex;
     box-sizing: border-box;
     padding: 0 24px;
     width: 100%;
     max-width: var(--box-container-max-width);
+    margin: auto;
 }
-.nav-links {
+nav .links-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 32px 0;
 }
-.nav-link {
+nav .link {
     display: flex;
     text-decoration: none;
     padding: 8px 12px;
     color: var(--color-text-darker);
 }
-.nav-link:hover {
+nav .link:hover {
     font-weight: bold;
 }
 .logo svg {
@@ -48,55 +53,56 @@ nav {
 
 main {
     display: flex;
-    justify-content: center;
-}
-
-.sections-container {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     box-sizing: border-box;
     width: 100%;
     max-width: var(--box-container-max-width);
     padding: 0 24px;
+    margin: auto;
 }
 /* ---- inizio sezioni e box ----- ----*/
-.box-section {
+.box-container-2-col, .box-container-1-col {
     display: flex;
     gap: var(--box-gap);
     margin-bottom: var(--box-gap);
-    width: inherit;
 }
 
 /* ---- struttura delle box singole ---- ---- ---- */
 /* impostazione contenitore genitore */
-.v-box, .h-box, .h-box-low  {
+.box {
     display: flex;
     align-items: flex-end;
     width: 100%;
-    height: var(--box-height-def);
-    max-height: calc(var(--box-container-max-width) / 2 * 1.07);
     position: relative;
     border-radius: var(--border-radius-def);
     text-decoration: none;
     overflow: hidden;
 }
-.h-box-low {
+.box-short {
     height: var(--box-height-low);
     max-height: calc(var(--box-container-max-width) / 2.2);
 }
+.box-standard {
+    height: var(--box-height-def);
+    max-height: calc(var(--box-container-max-width) / 2 * 1.07);
+}
+.box-tall {
+    height: var(--box-height-high);
+    max-height: calc(var(--box-container-max-width) / 2 * 1.07);
+}
 /* impostazioni di video e immagini di sfondo */
-.v-box video, .h-box > img, .h-box-low >img {
+.box .bg-main {
     position: absolute;
     left: 50%;
     top: 50%;
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
-    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 /*gradiente semi trasparente (sopra lo sfondo, ma dietro il testo)*/
-.bg-gradient {
+.box .bg-overlay {
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -105,38 +111,44 @@ main {
     border-radius: 8px;
     background-image: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
 }
+.box .bg-overlay-none {
+    background-image: none;
+}
 /*soprattitolo, titolo e freccetta*/
-.h-box-content {
+.box .bottom-items {
     display: flex;
     align-items: flex-start;
     height: fit-content;
     width: 100%;
     padding: 24px 8% 24px 24px;
-    color: white; /* aggiungere variabili font-color-light e font-color-dark */
+    color: white;
     transition: 500ms transform ease;
     transform: translateX(-64px);
 }
-/*titolo e soprattitolo*/
-.h-box-title {
-    height: fit-content;
-    align-items: flex-start;
+.box .items-dark, .box-fancy .items-dark {
+    color: var(--color-text-darker);
+    text-shadow: none;
 }
-.h-box-content h2 {
+.box .items-light, .box-fancy .items-light {
+    color: var(--color-text-light);
+}
+.box .items-light p, .box-fancy .items-light p {
+    text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.7);
+}
+.box .bottom-items h2, .box-fancy .left-items h2 {
     font-size: 2.2rem;
     margin: 0;
     line-height: 120%;
-    letter-spacing: 0.05rem;
 }
-.h-box-content p {
+.box .bottom-items p {
     margin: 0;
-    text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
 }
-.sections-container .box-section:last-child .h-box-content h2 {
+.sections-container .box-container-2-col:last-child .box .bottom-items h2 {
     font-size: 3rem;
 }
 
 /*freccetta*/
-.h-box-content img {
+.box .bottom-items .ico, .box-fancy .left-items .ico  {
     height: 48px;
     width: 48px;
     margin-top: 1rem;
@@ -148,106 +160,101 @@ main {
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
 /* ---- Inizio CSS freccetta a comparsa ---- ---- ---- */
-.h-box:hover .h-box-content{
+.box:hover .bottom-items {
     transform: translateX(0);
 }
-.h-box:hover .h-box-content img {
+.box:hover .bottom-items .ico {
     transform: translate(0);
     opacity: 100%;
 }
-.h-box-low:hover .h-box-content {
+.box-fancy:hover .left-items {
     transform: translateX(0);
 }
-.h-box-low:hover .h-box-content img{
+.box-fancy:hover .left-items .ico {
     transform: translate(0);
     opacity: 100%;
 }
-.v-box:hover .h-box-content {
-    transform: translateX(0);
-}
-.v-box:hover .h-box-content img {
-    transform: translate(0);
-    opacity: 100%;
-}
+
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
 /* ------- inizio CSS carosello ----------*/
-.carousel-container, .carousel2-container {
+.carousel {
     display: flex;
     align-items: center;
     width: 100%;
     height: fit-content;
     max-height: var(--carousel-height);
     max-height: calc(var(--box-container-max-width) / 4);
-    padding: 3.75rem;
+    padding: 3.75rem 5.75rem 3.75rem 3.75rem;
     border-radius: var(--border-radius-def);
     overflow: hidden;
 }
 /* contenitore di testo e galleria */
-.carousel-content {
+.carousel .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 /* testo sulla destra*/
-.carousel-text {
+.carousel .left-items {
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
-    min-width: 350px;
+    min-width: 300px;
     max-width: 30%;
     margin-right: 1.75em;
 }
-.carousel-text h2,
+.carousel .left-items h2,
 p {
     margin: 0;
     padding: 0;
 }
-.carousel-text h2 {
+.carousel .left-items h2 {
     font-size: 2.25rem;
     line-height: 120%;
+    letter-spacing: -0.08rem;
 }
-.carousel-text p {
-    line-height: 180%;
+.carousel .left-items p {
+    line-height: 160%;
 }
 
-/* galleria */
-.carousel-gallery {
+.carousel .right-items {
     display: flex;
     align-items: center;
     width: fit-content;
     height: fit-content;
     position: relative;
-    margin-left: 1.75rem;
 }
-.carousel-gallery-cards {
+.carousel .gallery {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns:calc(var(--box-container-max-width) * 0.175) ;
-    width: calc(var(--box-container-max-width) * 0.175 * 3 + 32px);
+    grid-auto-columns: calc(var(--box-container-max-width) * 0.175);
+    width: calc(var(--box-container-max-width) * (0.175 * 3) + 50px);
     height: fit-content;
-    gap: 16px;
+    gap: 24px;
     overflow-y: hidden;
     overflow-x: scroll;
 }
-    /*
+/*
     può tornare utile per lo scroll con i bottoni :
-        .carousel-gallery-cards { scroll-snap-type: inline mandatory;}
-        .carousel-gallery-cards > * { scroll-snap-align: start;} 
+        .gallery { scroll-snap-type: inline mandatory;}
+        .gallery > * { scroll-snap-align: start;} 
     */
 
-
-.carousel-gallery-cards::-webkit-scrollbar {
+.carousel .gallery::-webkit-scrollbar {
     height: 16px;
     border-top: 3px solid white;
 }
-.carousel-gallery-cards::-webkit-scrollbar-thumb:horizontal {
+.carousel .gallery::-webkit-scrollbar-thumb:horizontal {
     border-top: 3px solid black;
 }
 
-.carousel-gallery .button-right, .button-left {
+.carousel .right-items .button-right,
+.button-left {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,153 +262,105 @@ p {
     width: 3.75rem;
     border-radius: 3.75rem;
     background-color: black;
-    position: absolute;
-    right: calc(3.75rem / 2 * -1);
     border: none;
 }
-.carousel-gallery .button-left {
+.carousel .right-items .button-right {
+    right: calc(3.75rem / 2 * -1);
+}
+.carousel .right-items .button-left {
     left: calc(3.75rem / 2 * -1);
 }
 
-.button-right img, .button-left img{
+.carousel .right-items .button-right img,
+.button-left img {
     height: 24px;
     width: 24px;
 }
 
-.carousel-card {
+.carousel .card {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     box-sizing: border-box;
-    height: 340px;
-    margin-bottom: 16px;
+    height: 350px;
+    margin-bottom: 24px;
     border-radius: var(--border-radius-def);
     background-color: var(--color-background);
     overflow: hidden;
 }
-.carousel-card img {
+.carousel .card img,
+video {
     height: 20%;
     flex-grow: 1;
     object-fit: cover;
 }
-.carousel-card video {
-    height: 20%;
-    flex-grow: 1;
-    object-fit: cover;
-}
-.carousel-card section {
+.carousel .card .bottom-items {
     display: flex;
     flex-direction: column;
     height: fit-content;
     padding: 16px 8px 16px 16px;
 }
-.carousel-card section h3,
+.carousel .card .bottom-items h3,
 p {
     margin: 0;
     padding: 0;
 }
-.carousel-card section h3 {
+.carousel .card .bottom-items h3 {
     font-size: 1rem;
+    font-family: "Noto IKEA Latin Bold";
 }
-.carousel-card section p {
+.carousel .card .bottom-items p {
     font-size: 0.85rem;
 }
-.carousel2-container .carousel-content .carousel-gallery .carousel-gallery-cards .carousel-card section{ 
+.carousel .card .bottom-items-spacious {
     height: 20%;
 }
-.carousel2-container .carousel-content .carousel-text h2 {
+.carousel .content .left-items-bigger h2 {
     font-size: 3.175rem;
     line-height: 105%;
-} 
-
-
+}
 
 /* ------- fine CSS carosello ----------*/
 
-/*francesco box2 go shopping section */
-.region-picker {
+/* inizio CSS fancy box */
+
+.box-fancy {
     display: flex;
-    flex-direction: column;
-    background: var(--color-ikea-yellow-hover);
-    padding: 0;
-    width: 25%;
-    letter-spacing: -0.96px;
-    line-height: 43px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 6.25rem 3.75rem;
+    box-sizing: border-box;
     border-radius: var(--border-radius-def);
-    /*    font-family: monospace;*/
-    justify-content: center;
+    margin-bottom: var(--box-gap);
+    position: relative;
 }
-
-.go-shopping {
+.military-green {
+    background-color: rgb(84, 88, 68);
+}
+.black-bg {
+    background: #000;
+}
+.box-fancy .left-items {
+    position: absolute;
     display: flex;
-    flex-direction: row;
-    flex-grow: 1;
+    width: 35%;
+    left: 3.75rem;
+    transition: 500ms transform ease;
+    transform: translateX(-64px);
 }
-
-#region-selector {
-    min-height: 15%;
-    max-height: 15%;
-    background-color: var(--color-ikea-yellow);
-    display: flex;
-    justify-content: center;
-}
-
-.region-picker-above {
-    display: flex;
-    flex: 2 75%;
-    flex-direction: column;
-    justify-content: center;
-    /*text-align: center;*/
-    padding: 5%;
-}
-/*section 7 css setti*/
-
-.container-report {
-    display: flex;
-    align-items: stretch;
-    background-color: var(--color-grey-dark);
-    color: var(--color-background);
-}
-
-
-.image-report {
-    object-position: 50% 50%;
-}
-
-.img-svelte {
-    /*position: absolute;*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: var(--border-radius-def);
-
-}
-
-.report-text h2 {
-    font-size: 3rem;
+.box-fancy .title-huge h2 {
+    font-size: 4.5rem;
     line-height: 108%;
-    font-weight: 700;
-    margin: 1rem 0;
-    word-wrap: break-word;
-    max-width: 8ch;
-    letter-spacing: -0.115rem;
-}
-
-.report-text p {
-    font-size: 1rem;
     margin: 0;
-    padding: 0;
 }
 
-.img-container {
+.box-fancy .right-items {
+    width: 70%;
+    height: 100%;
 }
-
-.black-text {
-    color: black;
-}
-.black-text p{
-    text-shadow: none;
+.box-fancy .right-items img, video {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius-def);
+    object-fit: cover;
 }
