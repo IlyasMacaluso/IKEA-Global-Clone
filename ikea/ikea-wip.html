@@ -12,7 +12,7 @@
     <body>
         <header>
             <!-- nav bar -->
-            <nav>
+            <nav class="navbar">
                 <!-- contenitore links -->
                 <section class="links-container">
                     <a class="logo" href="">
@@ -40,11 +40,12 @@
                     <a class="link" href="#">Jobs</a>
                     <a class="link" href="#">Newsroom</a>
                     <a class="link" href="#">Our business</a>
-                    <a class="mobile-ico" href="#"> <img src="" alt="" /> </a>
                 </section>
+                <button class="mobile-ico"> <img src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg" alt="The hamburger menu for opening the mobile navigation" /> </b>
             </nav>
-            <nav class="mobile-nav">
-                <div class="header"><img class="close" src="" alt="" /></div>
+
+            <nav class="mobile-nav non-visible">
+                <header><button class="close"><img src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg" alt="The close button for closing the mobile navigation"/></button></header>
                 <div class="links-list">
                     <a class="go-shopping"> </a>
                     <a class="link">
@@ -77,6 +78,7 @@
                     </a>
                 </div>
             </nav>
+            <script src="js/toggle-mobile-nav.js"></script>
         </header>
 
         <main>
@@ -326,7 +328,7 @@
                 </a>
             </section>
             <!-- fine sezione 5 alessandro canonico (video) -->
-            
+
             <!-- inizio sezione 7 carosello -->
             <section class="box-container-2-col">
                 <div class="carousel" style="background-color: #a1c26a">

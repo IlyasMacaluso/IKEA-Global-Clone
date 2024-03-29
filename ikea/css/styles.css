@@ -22,28 +22,29 @@ h2 {
     font-family: "Noto IKEA Latin Bold";
 }
 /*--- inizio nav e propri contenuti*/
-nav {
+.navbar {
     display: flex;
-    display: flex;
+    align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
-    padding: 0 24px;
+    padding: 0 1.5rem;
     width: 100%;
     max-width: var(--box-container-max-width);
     margin: auto;
 }
-nav .links-container {
+.navbar .links-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 32px 0;
 }
-nav .link {
+.navbar .link {
     display: flex;
     text-decoration: none;
     padding: 8px 12px;
     color: var(--color-text-darker);
 }
-nav .link:hover {
+.navbar .link:hover {
     font-weight: bold;
 }
 .logo svg {
@@ -363,4 +364,87 @@ p {
     width: 100%;
     border-radius: var(--border-radius-def);
     object-fit: cover;
+}
+/* mobile-sidebar, regole da attivare solo per mobile (max-width: 500px -più o meno-) */
+.mobile-ico {
+    display: flex;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    border: none;
+    background: none;
+}
+
+.mobile-ico img {
+    height: 100%;
+    width: 100%;
+}
+.mobile-nav header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+    margin-bottom: -1rem;
+    box-sizing: border-box;
+}
+.mobile-nav header .close {
+    height: 32px;
+    width: 32px;
+    border: none;
+    background: none;
+}
+.mobile-nav header  img {
+    height: 100%;
+    width: 100%;
+}
+.mobile-nav {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    width: 28rem;
+    height: 100svh;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.mobile-nav .links-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem 1rem 1rem;
+}
+.mobile-nav .links-list .go-shopping {
+    height: 160px;
+    width: 100%;
+    background-color: #ffdb00;
+    border-radius: var(--border-radius-def);
+}
+.mobile-nav .links-list .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.125rem 0 1rem;
+    border-bottom: 0.0625rem solid #cccccc;
+    font-size: 1.05rem;
+    line-height: 120%;
+    height: 7.5rem;
+}
+.mobile-nav .links-list .link img{
+    height: 24;
+    width: 24;
+}
+
+.non-visible {
+    transition: transform 300ms ease-in-out;
+    transform: translateX(27rem);
+}
+.visible {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
 }
