@@ -8,6 +8,7 @@
             format("woff2"),
         url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.woff") format("woff");
 }
+
 img,
 svg {
     display: block;
@@ -51,22 +52,27 @@ nav .link:hover {
 }
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: var(--box-container-max-width);
+.sections-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
     padding: 0 24px;
+    max-width: 90rem;
     margin: auto;
-}
+    box-sizing: border-box;
+  }
 /* ---- inizio sezioni e box ----- ----*/
-.box-container-2-col, .box-container-1-col {
-    display: flex;
+.box-container-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--box-gap);
     margin-bottom: var(--box-gap);
 }
+
+.box-container-1-col {
+    margin-bottom: var(--box-gap);
+    gap: var(--box-gap);
+  }
 
 /* ---- struttura delle box singole ---- ---- ---- */
 /* impostazione contenitore genitore */
@@ -74,6 +80,8 @@ main {
     display: flex;
     align-items: flex-end;
     width: 100%;
+    height: var(--box-height-def);
+    max-height: calc(var(--box-container-max-width) / 2 * 1.07);
     position: relative;
     border-radius: var(--border-radius-def);
     text-decoration: none;
@@ -99,29 +107,34 @@ main {
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 /*gradiente semi trasparente (sopra lo sfondo, ma dietro il testo)*/
 .box .bg-overlay {
-    position: relative;
     display: flex;
     align-items: flex-end;
+    position: relative;
     height: 100%;
     width: 100%;
     border-radius: 8px;
-    background-image: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
+    background-image: linear-gradient(
+      to bottom,
+      transparent 60%,
+      rgba(0, 0, 0, 0.7)
+    );
 }
+
 .box .bg-overlay-none {
     background-image: none;
 }
 /*soprattitolo, titolo e freccetta*/
 .box .bottom-items {
     display: flex;
-    align-items: flex-start;
-    height: fit-content;
+    align-items: flex-end;
     width: 100%;
-    padding: 24px 8% 24px 24px;
-    color: white;
+    padding: 24px 8% 24px 20px;
+    color: white; 
     transition: 500ms transform ease;
     transform: translateX(-64px);
 }
@@ -157,6 +170,11 @@ main {
     transition: 400ms ease;
     transform: translateX(-5rem);
 }
+
+.bi-arrow-right {
+    font-size: 3em;
+    margin-right: 18px;
+  }
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
 /* ---- Inizio CSS freccetta a comparsa ---- ---- ---- */
@@ -181,7 +199,6 @@ main {
 .carousel {
     display: flex;
     align-items: center;
-    width: 100%;
     height: fit-content;
     max-height: var(--carousel-height);
     max-height: calc(var(--box-container-max-width) / 4);
@@ -369,3 +386,115 @@ p {
     width: 100%;
     border-radius: var(--border-radius-def);
 }
+
+footer .top-box {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding-bottom: 2rem;
+  }
+  
+  .room-box {
+    position: relative;
+    width: 100%;
+  }
+  
+  .room-box img {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .room-img-lights {
+    position: absolute;
+    top: 0;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .switch-box {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .switch-box .switch-1 {
+      position: absolute;
+      width: 1.5em;
+      height: 1.5em;
+      top: 50%;
+      left: 25%;
+      display: block;
+  }
+  
+  .switch-box .switch-2 {
+      position: absolute;
+      width: 1.5em;
+      height: 1.5em;
+      top: 9em;
+      right: 22.8em;
+      display: block;
+  }
+  
+  .switch-box .switch-3 {
+      position: absolute;
+      width: 1.5em;
+      height: 1.5em;
+      top: 9.8em;
+      right: 3.9em;
+      display: block;
+  }
+  
+  footer .bottom-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    padding: 24px;
+    background-color: var(--color-ikea-blue);
+  }
+  
+  .bottom-box .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  
+  .bottom-box .links a {
+    text-decoration: none;
+    color: white;
+    padding: 0 0.75rem;
+    margin: 0;
+    border-right: 1px solid white;
+    font-size: 1.25rem;
+    min-width: max-content;
+  }
+  
+  .bottom-box .links a:last-child {
+    border-right: none;
+  }
+  
+  .bottom-box .info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bottom-box .info .center {
+    display: flex;
+    gap: 2px;
+    font-size: 0.7rem;
+    color: white;
+  }
+  
+  .bottom-box .info a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
+  }
+  
+  /* -----------------fine footer alessandro */
+  
