@@ -408,6 +408,8 @@ p {
     right: 0;
     top: 0;
     box-sizing: border-box;
+    transform: translateX(27rem);
+    transition: transform 300ms ease-in-out;
 }
 
 .mobile-nav .links-list {
@@ -440,10 +442,6 @@ p {
     width: 24;
 }
 
-.non-visible {
-    transition: transform 300ms ease-in-out;
-    transform: translateX(27rem);
-}
 .visible {
     transform: translateX(0);
     transition: transform 300ms ease-in-out;
