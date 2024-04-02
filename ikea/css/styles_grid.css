@@ -438,30 +438,42 @@ footer .top-box {
 .room-img-lights {
   position: absolute;
   top: 0;
-  height: 100%;
-  width: 100%;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.room-box .switch-1 {
+.switch-box {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.switch-box .switch-1 {
     position: absolute;
-    max-width: 1em;
-    height: 100%;
-    top: 6.8em;
-    left: 19.8em;
+    width: 1.5em;
+    height: 1.5em;
+    top: 50%;
+    left: 25%;
     display: block;
 }
 
-.room-box .switch-2 {
+.switch-box .switch-2 {
     position: absolute;
-    max-width: 1em;
+    width: 1.5em;
+    height: 1.5em;
     top: 9em;
     right: 22.8em;
     display: block;
 }
 
-.room-box .switch-3 {
+.switch-box .switch-3 {
     position: absolute;
-    max-width: 1em;
+    width: 1.5em;
+    height: 1.5em;
     top: 9.8em;
     right: 3.9em;
     display: block;
