@@ -12,57 +12,129 @@ body {
 }
 
 /*--- inizio nav e propri contenuti*/
-nav{
-    display: flex;
-    margin: 0px 0px 8px 0px;
-    justify-content: center;
-    /* border: 1px dashed red */
-}
+
 .nav-container {
     display: flex;
-    margin: 8px 24px 24px;
-    width: 100%;
-    max-width: var(--box-container-max-width);
-    /* border: 2px dotted black; */
-}
-.nav-links {
-    display: flex;
+    position: sticky;
+    justify-content:space-between;
     align-items: center;
-    gap: 1.6vw; 
+    width: 90vw;
+    border: 2px dotted black;
+    margin: 24px 40px;
+    padding: 0px 0px; /* da aggiustare con il pull */
 }
-.nav-box{
-    display: inline;
-    /* border: 2px solid green; */
-}
-.nav-text{
-    width:100%;
-    font-size: 17px;
-    padding-right: 8px;
-    text-align:center;
-    margin-left: 2px;
-    box-sizing: border-box;
-    opacity: 100%;
-}
-.nav-box a{
-    display: none;
-    text-decoration: none;
-    color: var(--font-color);
-    font-weight: bold;
-    position:absolute;
-    text-align:center;
-    margin-left: 1px;
-    transform: translateY(-100%)
-}
-.nav-box:hover .nav-text{
-    opacity: 0%;
-}
-.nav-box:hover a {
-    display: block;
-}
-.logo svg {
+
+.logo{
+    display:inline;
+    height: 0.7rem;
     margin-right: 12px;
 }
-/*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
+
+.nav-box{
+    display:flex;
+    overflow: hidden;
+    width:40%;
+    justify-content:space-evenly; 
+    align-items: center;
+    color: var(--font-color);
+    border: 1px solid black;
+}
+
+.nav-hidelink{
+    display: flex;
+    position:relative;
+    padding: 0px 8px 0px 8px;
+    font-size: 16px; 
+    color:rgba(255, 255, 255, 0);
+    text-decoration: none;
+    font-stretch: semi-expanded;
+    
+}
+
+.nav-hidelink .nav-text{
+    position: absolute;
+    color: initial;
+    justify-self:center;
+    z-index: 1;
+}
+
+.nav-hidelink:hover .nav-text{
+    font-weight: bold;
+    left:6px; 
+}
+
+.nav-side{
+    display:flex;
+    
+}
+.nav-side img{
+    display:none;
+    width:24px; 
+} 
+
+.links{
+    display:flex;
+    width:15vw;
+    padding: 0.7rem;
+    justify-content: space-around;
+    background-color: var( --color-ikea-yellow);
+    border-radius: var(--border-radius-def);
+    color:var(--font-color);
+    font-size: 1.1rem;
+    font-stretch: semi-expanded;
+}
+
+.goto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content:center;
+    gap:5px;
+    text-decoration: none;
+    
+}
+
+#shop-list{
+    display:inline;
+    width:30%;
+    background-color: var( --color-ikea-yellow);
+    border:none;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+ 
+.goto hr{
+    height:200%;
+    width: 1px;
+    color:white;
+}
+
+.arrow{
+    display: inline;
+    background-color: black;
+    border-radius: 50%;
+    transform:rotate(180deg)
+}
+
+
+
+@media screen and (max-width: 64rem){
+    .nav-hidelink{
+        display: none;
+    }
+    .nav-box{
+        justify-content: flex-start;
+    }
+    .nav-selector{
+        display:none;
+    }
+    .nav-side img{
+        display:inline-block;
+    } 
+}
+/*---- fine nav ----*/
 
 main {
     display: flex;
@@ -146,12 +218,7 @@ main {
         overflow-clip-margin: content-box;
         overflow: clip;
 }  
-   /*  position: absolute;
-    left: 50%;
-    top: 50%;
-    height: var(--box-height-def);
-    max-height: calc(var(--box-container-max-width) / 2 * 1.1);
-    transform: translate(-50%, -50%); */
+
 
 /*gradiente semi-trasparente*/
 .v-box .bg-gradient {
@@ -183,7 +250,7 @@ main {
 }
 
 
-.h-box-split{
+/* .h-box-split{
     display: flex;
     align-items: flex-start;
     width: 50vw;
@@ -195,6 +262,22 @@ main {
     background-size: cover;
     text-decoration: none;
     overflow: hidden;
+} */
+.h-box-split{
+    display: flex;
+    align-items: flex-start;
+    width: 50vw;
+    height:fit-content;
+    /* border-radius: 50% 50% var(--border-radius-def); */
+    margin: 0px 0px 20px;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+.h-box-split img{
+ height: auto;
+ object-fit: fill;
 }
 
 /*titolo e sopratitolo*/
