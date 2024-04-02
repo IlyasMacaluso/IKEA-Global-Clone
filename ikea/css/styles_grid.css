@@ -121,7 +121,7 @@ nav {
   display: flex;
   align-items: flex-end;
   width: 100%;
-  padding: 24px 8% 24px 24px;
+  padding: 24px 8% 24px 20px;
   color: white; /* aggiungere variabili font-color-light e font-color-dark */
   transition: 500ms transform ease;
   transform: translateX(-64px);
@@ -156,10 +156,9 @@ nav {
   transform: translateX(-5rem);
 }
 
-.material-symbols-outlined {
-  font-variation-settings: 'opsz' 48;
-  margin-right: 12px;
-  margin-top: 12px;
+.bi-arrow-right {
+  font-size: 3em;
+  margin-right: 18px;
 }
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
