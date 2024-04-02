@@ -132,7 +132,7 @@ main {
 .box .items-light, .box-fancy .items-light {
     color: var(--color-text-light);
 }
-.box .items-light p, .box-fancy .items-light p {
+.box .items-light p {
     text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.7);
 }
 .box .bottom-items h2, .box-fancy .left-items h2 {
@@ -348,6 +348,7 @@ p {
     transition: 500ms transform ease;
     transform: translateX(-64px);
 }
+
 .box-fancy .title-huge h2 {
     font-size: 4.5rem;
     line-height: 108%;
@@ -358,9 +359,13 @@ p {
     width: 70%;
     height: 100%;
 }
-.box-fancy .right-items img, video {
+
+.box-fancy .right-items p {
+    text-shadow: none;
+}
+
+.box-fancy .right-items img, .box-fancy .right-items video {
     height: 100%;
     width: 100%;
     border-radius: var(--border-radius-def);
-    object-fit: cover;
 }
