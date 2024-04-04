@@ -12,7 +12,9 @@
     --box-height-low: 40vw;
     --carousel-height: 30vw;
     --container-spacing-desktop: 1.5rem;
-
+     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 
     /*colori ikea ufficiali*/
     --color-logo: #fae6e6;
@@ -27,7 +29,12 @@
     --color-text-dark: rgba(0, 0, 0, 0.74);
     --color-text-darker: #111111;
     --color-text-black: #000;
+    --color-text-light: #fffefb;
     --color-grey: #dfdfdf;
     --color-grey-dark: #999999;
-    
+   
+}
+@font-face {
+    font-family: "Noto IKEA";
+    src: url('https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-400.latin.647e877d.woff2') format('woff2');
 }
