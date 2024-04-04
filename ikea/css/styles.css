@@ -6,6 +6,7 @@
             format("woff2"),
         url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.woff") format("woff");
 }
+
 img,
 svg {
     display: block;
@@ -50,21 +51,26 @@ h2 {
 }
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: var(--box-container-max-width);
+.sections-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
     padding: 0 24px;
+    max-width: 90rem;
     margin: auto;
+    box-sizing: border-box;
 }
 /* ---- inizio sezioni e box ----- ----*/
-.box-container-2-col, .box-container-1-col {
-    display: flex;
+.box-container-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--box-gap);
     margin-bottom: var(--box-gap);
+}
+
+.box-container-1-col {
+    margin-bottom: var(--box-gap);
+    gap: var(--box-gap);
 }
 
 /* ---- struttura delle box singole ---- ---- ---- */
@@ -73,6 +79,8 @@ main {
     display: flex;
     align-items: flex-end;
     width: 100%;
+    height: var(--box-height-def);
+    max-height: calc(var(--box-container-max-width) / 2 * 1.07);
     position: relative;
     border-radius: var(--border-radius-def);
     text-decoration: none;
@@ -98,43 +106,47 @@ main {
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 /*gradiente semi trasparente (sopra lo sfondo, ma dietro il testo)*/
 .box .bg-overlay {
-    position: relative;
     display: flex;
     align-items: flex-end;
+    position: relative;
     height: 100%;
     width: 100%;
     border-radius: 8px;
     background-image: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
 }
+
 .box .bg-overlay-none {
     background-image: none;
 }
 /*soprattitolo, titolo e freccetta*/
 .box .bottom-items {
     display: flex;
-    align-items: flex-start;
-    height: fit-content;
+    align-items: flex-end;
     width: 100%;
-    padding: 24px 8% 24px 24px;
+    padding: 24px 8% 24px 20px;
     color: white;
     transition: 500ms transform ease;
     transform: translateX(-64px);
 }
-.box .items-dark, .box-fancy .items-dark {
+.box .items-dark,
+.box-fancy .items-dark {
     color: var(--color-text-darker);
     text-shadow: none;
 }
-.box .items-light, .box-fancy .items-light {
+.box .items-light,
+.box-fancy .items-light {
     color: var(--color-text-light);
 }
-.box .items-light p, .box-fancy .items-light p {
+.box .items-light p {
     text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.7);
 }
-.box .bottom-items h2, .box-fancy .left-items h2 {
+.box .bottom-items h2,
+.box-fancy .left-items h2 {
     font-size: 2.2rem;
     margin: 0;
     line-height: 120%;
@@ -147,7 +159,8 @@ main {
 }
 
 /*freccetta*/
-.box .bottom-items .ico, .box-fancy .left-items .ico  {
+.box .bottom-items .ico,
+.box-fancy .left-items .ico {
     height: 48px;
     width: 48px;
     margin-top: 1rem;
@@ -156,8 +169,60 @@ main {
     transition: 400ms ease;
     transform: translateX(-5rem);
 }
-/*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
+.bi-arrow-right {
+    font-size: 3em;
+    margin-right: 18px;
+}
+
+/* inizio CSS fancy box */
+.box-fancy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 6.25rem 3.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius-def);
+    margin-bottom: var(--box-gap);
+    position: relative;
+}
+
+.box-fancy .left-items {
+    position: absolute;
+    display: flex;
+    width: 35%;
+    left: 3.75rem;
+    transition: 500ms transform ease;
+    transform: translateX(-64px);
+}
+
+.box-fancy .title-huge h2 {
+    font-size: 4.5rem;
+    line-height: 108%;
+    margin: 0;
+}
+
+.box-fancy .right-items {
+    width: 70%;
+    height: 100%;
+}
+
+.box-fancy .right-items p {
+    text-shadow: none;
+}
+
+.box-fancy .right-items img,
+.box-fancy .right-items video {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius-def);
+}
+.military-green {
+    background-color: rgb(84, 88, 68);
+}
+.black-bg {
+    background: #000;
+}
 /* ---- Inizio CSS freccetta a comparsa ---- ---- ---- */
 .box:hover .bottom-items {
     transform: translateX(0);
@@ -180,7 +245,6 @@ main {
 .carousel {
     display: flex;
     align-items: center;
-    width: 100%;
     height: fit-content;
     max-height: var(--carousel-height);
     max-height: calc(var(--box-container-max-width) / 4);
@@ -321,47 +385,116 @@ p {
 
 /* ------- fine CSS carosello ----------*/
 
-/* inizio CSS fancy box */
-
-.box-fancy {
+footer .top-box {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 6.25rem 3.75rem;
-    box-sizing: border-box;
-    border-radius: var(--border-radius-def);
-    margin-bottom: var(--box-gap);
+    flex-direction: column;
+    place-items: center;
+    padding-bottom: 2rem;
+}
+
+footer .room-box {
     position: relative;
-}
-.military-green {
-    background-color: rgb(84, 88, 68);
-}
-.black-bg {
-    background: #000;
-}
-.box-fancy .left-items {
-    position: absolute;
     display: flex;
-    width: 35%;
-    left: 3.75rem;
-    transition: 500ms transform ease;
-    transform: translateX(-64px);
-}
-.box-fancy .title-huge h2 {
-    font-size: 4.5rem;
-    line-height: 108%;
-    margin: 0;
+    width: 114rem;
+    max-width: 100%;
+    margin: auto;
 }
 
-.box-fancy .right-items {
-    width: 70%;
-    height: 100%;
-}
-.box-fancy .right-items img, video {
-    height: 100%;
+footer .room-box img {
+    display: block;
     width: 100%;
-    border-radius: var(--border-radius-def);
-    object-fit: cover;
+    margin: auto;
+}
+
+footer .room-img-lights {
+    position: absolute;
+    top: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer .switch-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer .switch-box .switch-1 {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 37%;
+    left: 25%;
+    display: block;
+}
+
+footer .switch-box .switch-2 {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 25%;
+    right: 29%;
+    display: block;
+}
+
+footer .switch-box .switch-3 {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 15%;
+    right: 5%;
+    display: block;
+}
+
+footer .bottom-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    padding: 24px;
+    background-color: var(--color-ikea-blue);
+}
+
+footer .bottom-box .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+footer .bottom-box .links a {
+    text-decoration: none;
+    color: white;
+    padding: 0 0.75rem;
+    margin: 0;
+    border-right: 1px solid white;
+    font-size: 1.25rem;
+    min-width: max-content;
+}
+
+footer .bottom-box .links a:last-child {
+    border-right: none;
+}
+
+footer .bottom-box .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bottom-box .info .center {
+    display: flex;
+    gap: 2px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+footer .bottom-box .info a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
 }
 /* mobile-sidebar, regole da attivare solo per mobile (max-width: 500px -più o meno-) */
 .mobile-ico {
