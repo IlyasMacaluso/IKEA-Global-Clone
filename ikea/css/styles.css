@@ -47,7 +47,7 @@ h2 {
     line-height: 100%;
 }
 .navbar .link:hover {
-    font-weight: bold;
+    font-weight: 700;
 }
 .logo svg {
     margin-right: 1rem;
@@ -204,10 +204,14 @@ h2 {
 .box-fancy .left-items {
     position: absolute;
     display: flex;
-    width: 25%;
+    width: 23rem;
     left: 3.75rem;
     transition: 500ms transform ease;
     transform: translateX(-64px);
+}
+.box-fancy .left-items .title-huge {
+    font-size: 4.4rem;
+    line-height: 108%;
 }
 
 .box-fancy .right-items {
@@ -223,6 +227,7 @@ h2 {
 .box-fancy .right-items video {
     height: 100%;
     width: 100%;
+    object-fit: cover;
     border-radius: var(--border-radius-def);
 }
 .military-green {
@@ -309,7 +314,7 @@ p {
     overflow-y: hidden;
     overflow-x: scroll;
 }
-/*
+/* 
     può tornare utile per lo scroll con i bottoni :
         .gallery { scroll-snap-type: inline mandatory;}
         .gallery > * { scroll-snap-align: start;} 
@@ -504,6 +509,7 @@ footer .bottom-box .info a {
     color: white;
     font-size: 0.7rem;
 }
+
 /* mobile-sidebar, regole da attivare solo per mobile (max-width: 500px -più o meno-) */
 .mobile-ico {
     display: flex;
@@ -518,27 +524,28 @@ footer .bottom-box .info a {
     height: 100%;
     width: 100%;
 }
-.mobile-nav header {
+
+.mobile-nav > header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 6rem;
-    padding: 1rem;
-    margin-bottom: -1rem;
+    height: 4.25em;
     box-sizing: border-box;
 }
-.mobile-nav header .close {
+.mobile-nav > header .close {
     height: 32px;
     width: 32px;
     border: none;
     background: none;
 }
-.mobile-nav header img {
+.mobile-nav > header img {
     height: 100%;
     width: 100%;
 }
 .mobile-nav {
+    padding: 0 1rem 1rem 1rem;
+    box-sizing: border-box;
     position: fixed;
     background-color: white;
     z-index: 1;
@@ -547,8 +554,9 @@ footer .bottom-box .info a {
     right: 0;
     top: 0;
     box-sizing: border-box;
-    transform: translateX(27rem);
+    transform: translateX(28rem);
     transition: transform 300ms ease-in-out;
+    overflow-y: scroll;
 }
 
 .mobile-nav .links-list {
@@ -558,30 +566,177 @@ footer .bottom-box .info a {
     margin: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 1rem 1rem 1rem;
 }
-.mobile-nav .links-list .go-shopping {
-    height: 160px;
-    width: 100%;
-    background-color: #ffdb00;
-    border-radius: var(--border-radius-def);
-}
+
 .mobile-nav .links-list .link {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.125rem 0 1rem;
     border-bottom: 0.0625rem solid #cccccc;
-    font-size: 1.05rem;
+    font-size: 1.05rem; /*si potrebbe creare una custom prop per le dimension idei font*/
     line-height: 120%;
     height: 7.5rem;
 }
-.mobile-nav .links-list .link img {
-    height: 24;
-    width: 24;
-}
-
 .visible {
     transform: translateX(0);
     transition: transform 300ms ease-in-out;
+}
+.overlay-all {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -11;
+}
+.overlay-all-active {
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.mobile-nav .links-list .go-shopping {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffdb00;
+    border-radius: var(--border-radius-def);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mobile-nav .go-shopping > header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+    min-height: 3rem;
+}
+
+.mobile-nav .go-shopping header .ico {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.mobile-nav .go-shopping header h2 {
+    margin: 0;
+}
+.mobile-nav .go-shopping header .ico-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #000;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    border: none;
+}
+
+.mobile-nav .go-shopping .search {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.mobile-nav .go-shopping .region-selector::-webkit-scrollbar {
+    background: none;
+    width: 0.35rem;
+}
+
+.mobile-nav .go-shopping .region-selector::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}
+.mobile-nav .go-shopping .region-selector::-webkit-scrollbar-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: wheat;
+    height: 0.2rem;
+    border-radius: 8px;
+}
+
+.mobile-nav .go-shopping .center-items {
+    margin: 1rem;
+    padding: 0.7rem;
+    border-radius: var(--border-radius-def);
+    background: #fff094;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+.mobile-nav .go-shopping .center-items-hidden {
+    margin: 0 1rem;
+    padding: 0 0.7rem;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.mobile-nav .go-shopping .search input {
+    width: 100%;
+    height: 48px;
+    border: none;
+    padding: 0 0 0 3rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border-radius: var(--border-radius-def);
+}
+.mobile-nav .go-shopping .search .ico {
+    position: absolute;
+    left: 1rem;
+    bottom: 25%;
+    height: 1.25rem;
+    width: 1.25rem;
+}
+.mobile-nav .center-items {
+    display: flex;
+    flex-direction: column;
+    height: calc((2.5rem * 3) + 48px + 0.5rem);
+}
+.mobile-nav .center-items button {
+    display: flex;
+    align-items: center;
+    width: 98%;
+    border: none;
+    background: none;
+    height: 2.5rem;
+    border-radius: var(--border-radius-def);
+    font-size: 1rem;
+    font-family: inherit;
+    gap: 0.3rem;
+}
+.mobile-nav .center-items button span {
+    font-size: 0.9rem;
+}
+.mobile-nav .center-items button:hover {
+    background: #fff8ca;
+}
+.mobile-nav .center-items .region-selector {
+    overflow-y: scroll;
+}
+.mobile-nav .go-shopping footer {
+    display: flex;
+    min-height: 3rem;
+    padding: 1rem;
+    background-color: #ffdb00;
+    font-family: inherit;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.mobile-nav .go-shopping footer:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #fff193;
+}
+.mobile-nav .go-shopping .while-selector-visible {
+    border-top: 2px solid white;
+    background-color: #fff193;
+}
+.mobile-nav .go-shopping footer .left-items {
+    display: flex;
+    gap: 0.3rem;
+    width: 100%;
+    line-height: 100%;
+    align-items: center;
+}
+.mobile-nav .go-shopping footer .left-items .selected-store {
+    font-family: "Noto IKEA Latin Bold";
 }
