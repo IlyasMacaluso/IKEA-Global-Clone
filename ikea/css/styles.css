@@ -390,7 +390,21 @@ footer .top-box {
     display: flex;
     flex-direction: column;
     place-items: center;
-    padding-bottom: 2rem;
+}
+
+footer .top-box .text {
+    line-height: 120%;
+    margin: 0;
+    letter-spacing: -0.03375rem;
+    text-align: center;
+    padding: 0 2em;
+}
+
+
+footer .top-box svg {
+    width: 9.5625rem;
+    margin: 2.5rem auto 5rem;
+    height: auto;
 }
 
 footer .room-box {
@@ -424,12 +438,23 @@ footer .switch-box {
     right: 0;
 }
 
+
+
 footer .switch-box .switch-1 {
     position: absolute;
     width: 1.5em;
     height: 1.5em;
     bottom: 37%;
     left: 25%;
+    display: block;
+}
+
+footer .switch-box .light-switch-1 {
+    position: absolute;
+    width: 8.5em;
+    height: 4.4em;
+    bottom: 28.5%;
+    left: 21.7%;
     display: block;
 }
 
@@ -483,12 +508,12 @@ footer .bottom-box .links a:last-child {
 footer .bottom-box .info {
     display: flex;
     justify-content: space-between;
+    font-size: 1rem;
 }
 
 footer .bottom-box .info .center {
     display: flex;
     gap: 2px;
-    font-size: 0.7rem;
     color: white;
 }
 
