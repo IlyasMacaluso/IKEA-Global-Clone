@@ -60,7 +60,7 @@ nav .link:hover {
     max-width: 90rem;
     margin: auto;
     box-sizing: border-box;
-  }
+}
 /* ---- inizio sezioni e box ----- ----*/
 .box-container-2-col {
     display: grid;
@@ -72,7 +72,7 @@ nav .link:hover {
 .box-container-1-col {
     margin-bottom: var(--box-gap);
     gap: var(--box-gap);
-  }
+}
 
 /* ---- struttura delle box singole ---- ---- ---- */
 /* impostazione contenitore genitore */
@@ -118,11 +118,7 @@ nav .link:hover {
     height: 100%;
     width: 100%;
     border-radius: 8px;
-    background-image: linear-gradient(
-      to bottom,
-      transparent 60%,
-      rgba(0, 0, 0, 0.7)
-    );
+    background-image: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
 }
 
 .box .bg-overlay-none {
@@ -134,21 +130,24 @@ nav .link:hover {
     align-items: flex-end;
     width: 100%;
     padding: 24px 8% 24px 20px;
-    color: white; 
+    color: white;
     transition: 500ms transform ease;
     transform: translateX(-64px);
 }
-.box .items-dark, .box-fancy .items-dark {
+.box .items-dark,
+.box-fancy .items-dark {
     color: var(--color-text-darker);
     text-shadow: none;
 }
-.box .items-light, .box-fancy .items-light {
+.box .items-light,
+.box-fancy .items-light {
     color: var(--color-text-light);
 }
 .box .items-light p {
     text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.7);
 }
-.box .bottom-items h2, .box-fancy .left-items h2 {
+.box .bottom-items h2,
+.box-fancy .left-items h2 {
     font-size: 2.2rem;
     margin: 0;
     line-height: 120%;
@@ -161,7 +160,8 @@ nav .link:hover {
 }
 
 /*freccetta*/
-.box .bottom-items .ico, .box-fancy .left-items .ico  {
+.box .bottom-items .ico,
+.box-fancy .left-items .ico {
     height: 48px;
     width: 48px;
     margin-top: 1rem;
@@ -174,9 +174,56 @@ nav .link:hover {
 .bi-arrow-right {
     font-size: 3em;
     margin-right: 18px;
-  }
-/*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
+}
 
+/* inizio CSS fancy box */
+.box-fancy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 6.25rem 3.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius-def);
+    margin-bottom: var(--box-gap);
+    position: relative;
+}
+
+.box-fancy .left-items {
+    position: absolute;
+    display: flex;
+    width: 35%;
+    left: 3.75rem;
+    transition: 500ms transform ease;
+    transform: translateX(-64px);
+}
+
+.box-fancy .title-huge h2 {
+    font-size: 4.5rem;
+    line-height: 108%;
+    margin: 0;
+}
+
+.box-fancy .right-items {
+    width: 70%;
+    height: 100%;
+}
+
+.box-fancy .right-items p {
+    text-shadow: none;
+}
+
+.box-fancy .right-items img,
+.box-fancy .right-items video {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius-def);
+}
+.military-green {
+    background-color: rgb(84, 88, 68);
+}
+.black-bg {
+    background: #000;
+}
 /* ---- Inizio CSS freccetta a comparsa ---- ---- ---- */
 .box:hover .bottom-items {
     transform: translateX(0);
@@ -339,132 +386,87 @@ p {
 
 /* ------- fine CSS carosello ----------*/
 
-/* inizio CSS fancy box */
-
-.box-fancy {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 6.25rem 3.75rem;
-    box-sizing: border-box;
-    border-radius: var(--border-radius-def);
-    margin-bottom: var(--box-gap);
-    position: relative;
-}
-.military-green {
-    background-color: rgb(84, 88, 68);
-}
-.black-bg {
-    background: #000;
-}
-.box-fancy .left-items {
-    position: absolute;
-    display: flex;
-    width: 35%;
-    left: 3.75rem;
-    transition: 500ms transform ease;
-    transform: translateX(-64px);
-}
-
-.box-fancy .title-huge h2 {
-    font-size: 4.5rem;
-    line-height: 108%;
-    margin: 0;
-}
-
-.box-fancy .right-items {
-    width: 70%;
-    height: 100%;
-}
-
-.box-fancy .right-items p {
-    text-shadow: none;
-}
-
-.box-fancy .right-items img, .box-fancy .right-items video {
-    height: 100%;
-    width: 100%;
-    border-radius: var(--border-radius-def);
-}
-
 footer .top-box {
     display: flex;
     flex-direction: column;
     place-items: center;
     padding-bottom: 2rem;
-  }
-  
-  .room-box {
+}
+
+footer .room-box {
     position: relative;
-    width: 100%;
-  }
-  
-  .room-box img {
+    display: flex;
+    width: 114rem;
+    max-width: 100%;
+    margin: auto;
+}
+
+footer .room-box img {
     display: block;
     width: 100%;
     margin: auto;
-  }
-  
-  .room-img-lights {
+}
+
+footer .room-img-lights {
     position: absolute;
     top: 0;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-  }
-  
-  .switch-box {
+}
+
+footer .switch-box {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-  }
-  
-  .switch-box .switch-1 {
-      position: absolute;
-      width: 1.5em;
-      height: 1.5em;
-      top: 50%;
-      left: 25%;
-      display: block;
-  }
-  
-  .switch-box .switch-2 {
-      position: absolute;
-      width: 1.5em;
-      height: 1.5em;
-      top: 9em;
-      right: 22.8em;
-      display: block;
-  }
-  
-  .switch-box .switch-3 {
-      position: absolute;
-      width: 1.5em;
-      height: 1.5em;
-      top: 9.8em;
-      right: 3.9em;
-      display: block;
-  }
-  
-  footer .bottom-box {
+}
+
+footer .switch-box .switch-1 {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 37%;
+    left: 25%;
+    display: block;
+}
+
+footer .switch-box .switch-2 {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 25%;
+    right: 29%;
+    display: block;
+}
+
+footer .switch-box .switch-3 {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 15%;
+    right: 5%;
+    display: block;
+}
+
+footer .bottom-box {
     display: flex;
     flex-direction: column;
     gap: 4em;
     padding: 24px;
     background-color: var(--color-ikea-blue);
-  }
-  
-  .bottom-box .links {
+}
+
+footer .bottom-box .links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 24px;
-  }
-  
-  .bottom-box .links a {
+}
+
+footer .bottom-box .links a {
     text-decoration: none;
     color: white;
     padding: 0 0.75rem;
@@ -472,29 +474,28 @@ footer .top-box {
     border-right: 1px solid white;
     font-size: 1.25rem;
     min-width: max-content;
-  }
-  
-  .bottom-box .links a:last-child {
+}
+
+footer .bottom-box .links a:last-child {
     border-right: none;
-  }
-  
-  .bottom-box .info {
+}
+
+footer .bottom-box .info {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .bottom-box .info .center {
+}
+
+footer .bottom-box .info .center {
     display: flex;
     gap: 2px;
     font-size: 0.7rem;
     color: white;
-  }
-  
-  .bottom-box .info a {
+}
+
+footer .bottom-box .info a {
     text-decoration: none;
     color: white;
     font-size: 0.7rem;
-  }
-  
-  /* -----------------fine footer alessandro */
-  
+}
+
+/* -----------------fine footer alessandro */
