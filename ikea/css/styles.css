@@ -25,49 +25,19 @@ h2 {
 /*--- inizio nav e propri contenuti*/
 nav {
     display: flex;
-<<<<<<< HEAD
-    margin: 0px 0px 8px 0px;
-    justify-content: center;
-    border: 1px dashed red
-}
-.nav-container {
-=======
->>>>>>> 76b7e44d45233a0f5e16c9f840b6e4dccedf91d3
     display: flex;
     margin: 8px 24px 24px;
     box-sizing: border-box;
     padding: 0 24px;
     width: 100%;
     max-width: var(--box-container-max-width);
-<<<<<<< HEAD
-    border: 2px dotted black;
-=======
     margin: auto;
->>>>>>> 76b7e44d45233a0f5e16c9f840b6e4dccedf91d3
 }
 nav .links-container {
     display: flex;
     align-items: center;
     gap: 1.6vw; 
 }
-<<<<<<< HEAD
-.nav-box{
-    display: inline;
-    border: 2px solid green;
-}
-.nav-text{
-    width:100%;
-    padding-right: 8px;
-    text-align:center;
-    margin-left: 2px;
-    box-sizing: border-box;
-    opacity: 100%;
-}
-.nav-box a{
-    display: none;
-    text-decoration: none;
-    color: var(--font-color);
-=======
 nav .link {
     display: flex;
     text-decoration: none;
@@ -75,7 +45,6 @@ nav .link {
     color: var(--color-text-darker);
 }
 nav .link:hover {
->>>>>>> 76b7e44d45233a0f5e16c9f840b6e4dccedf91d3
     font-weight: bold;
     position:absolute;
     text-align:center;
@@ -93,14 +62,6 @@ nav .link:hover {
 }
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
-<<<<<<< HEAD
-main {
-    display: flex;
-    justify-content: center; 
-}
-
-=======
->>>>>>> 76b7e44d45233a0f5e16c9f840b6e4dccedf91d3
 .sections-container {
     display: grid;
     grid-template-columns: 100%;
