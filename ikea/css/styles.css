@@ -35,19 +35,22 @@ h2 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 32px 0;
+    padding: 1.5rem 0;
+    gap: 3px;
 }
 .navbar .link {
     display: flex;
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 1rem 1rem;
     color: var(--color-text-darker);
+    white-space: nowrap;
+    line-height: 100%;
 }
 .navbar .link:hover {
     font-weight: bold;
 }
 .logo svg {
-    margin-right: 12px;
+    margin-right: 1rem;
 }
 /*---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----*/
 
@@ -67,6 +70,15 @@ h2 {
     gap: var(--box-gap);
     margin-bottom: var(--box-gap);
 }
+.box-container-3-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--box-gap);
+    margin-bottom: var(--box-gap);
+}
+.box-2-3 {
+    grid-column: 1/3;
+}
 
 .box-container-1-col {
     margin-bottom: var(--box-gap);
@@ -79,8 +91,6 @@ h2 {
     display: flex;
     align-items: flex-end;
     width: 100%;
-    height: var(--box-height-def);
-    max-height: calc(var(--box-container-max-width) / 2 * 1.07);
     position: relative;
     border-radius: var(--border-radius-def);
     text-decoration: none;
@@ -92,11 +102,15 @@ h2 {
 }
 .box-standard {
     height: var(--box-height-def);
-    max-height: calc(var(--box-container-max-width) / 2 * 1.07);
+    max-height: calc(var(--box-container-max-width) / 1.95);
 }
 .box-tall {
     height: var(--box-height-high);
     max-height: calc(var(--box-container-max-width) / 2 * 1.07);
+}
+.box-first {
+    height: calc(100svh - 7.2rem);
+    min-height: 28rem;
 }
 /* impostazioni di video e immagini di sfondo */
 .box .bg-main {
@@ -117,7 +131,7 @@ h2 {
     height: 100%;
     width: 100%;
     border-radius: 8px;
-    background-image: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
+    background-image: linear-gradient(to bottom, transparent 75%, rgba(0, 0, 0, 0.75));
 }
 
 .box .bg-overlay-none {
@@ -128,7 +142,7 @@ h2 {
     display: flex;
     align-items: flex-end;
     width: 100%;
-    padding: 24px 8% 24px 20px;
+    padding: 1.5rem;
     color: white;
     transition: 500ms transform ease;
     transform: translateX(-64px);
@@ -148,14 +162,19 @@ h2 {
 .box .bottom-items h2,
 .box-fancy .left-items h2 {
     font-size: 2.2rem;
+    letter-spacing: -0.03rem;
     margin: 0;
     line-height: 120%;
 }
 .box .bottom-items p {
     margin: 0;
 }
-.sections-container .box-container-2-col:last-child .box .bottom-items h2 {
-    font-size: 3rem;
+.box .bottom-items .big-title,
+.box-fancy .left-items .big-title {
+    font-size: 3.2rem;
+    margin: 0;
+    line-height: 108%;
+    letter-spacing: -0.1rem;
 }
 
 /*freccetta*/
@@ -168,11 +187,6 @@ h2 {
     opacity: 1;
     transition: 400ms ease;
     transform: translateX(-5rem);
-}
-
-.bi-arrow-right {
-    font-size: 3em;
-    margin-right: 18px;
 }
 
 /* inizio CSS fancy box */
@@ -190,16 +204,10 @@ h2 {
 .box-fancy .left-items {
     position: absolute;
     display: flex;
-    width: 35%;
+    width: 25%;
     left: 3.75rem;
     transition: 500ms transform ease;
     transform: translateX(-64px);
-}
-
-.box-fancy .title-huge h2 {
-    font-size: 4.5rem;
-    line-height: 108%;
-    margin: 0;
 }
 
 .box-fancy .right-items {
@@ -526,7 +534,7 @@ footer .bottom-box .info a {
     border: none;
     background: none;
 }
-.mobile-nav header  img {
+.mobile-nav header img {
     height: 100%;
     width: 100%;
 }
@@ -568,7 +576,7 @@ footer .bottom-box .info a {
     line-height: 120%;
     height: 7.5rem;
 }
-.mobile-nav .links-list .link img{
+.mobile-nav .links-list .link img {
     height: 24;
     width: 24;
 }
