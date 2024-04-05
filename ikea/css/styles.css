@@ -37,6 +37,7 @@ nav .links-container {
     width:max-content;
     position: relative;
     align-items: center;
+        margin: 0.8rem 0 1.8rem 0;
     gap: 1.6vw; 
     
 }
@@ -75,6 +76,13 @@ nav .link:hover {
 .box-container-2-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: var(--box-gap);
+    margin-bottom: var(--box-gap);
+}
+
+.box-container-2-col#grid_2-1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: var(--box-gap);
     margin-bottom: var(--box-gap);
 }
