@@ -12,3 +12,8 @@ mobileNavOpenBtn.addEventListener("click", () => {
     mobileNav.classList.toggle("mobile-nav-visible")
     overlayAll.classList.toggle("overlay-all-active")
 })
+
+overlayAll.addEventListener("click", () => {
+    mobileNav.classList.toggle("mobile-nav-visible")
+    overlayAll.classList.toggle("overlay-all-active")
+})
