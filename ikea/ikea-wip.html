@@ -39,13 +39,13 @@
                     alt="The hamburger menu for opening the mobile navigation" /> </b>
         </nav>
 
-        <nav class="mobile-nav non-visible">
+        <nav class="mobile-nav">
             <header>
                 <button class="close"><img src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg"
                         alt="The close button for closing the mobile navigation" />
                 </button>
             </header>
-            <div class="links-list">
+            <div class="items-list">
                 <a href="#" class="go-shopping">
                     <header>
                         <h2>Go shopping</h2>
@@ -80,22 +80,37 @@
                     </footer>
                 </a>
 
-                <a class="link">
-                    <h2>Stories</h2>
-                    <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
-                </a>
-                <a class="link">
-                    <h2>Jobs</h2>
-                    <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
-                </a>
-                <a class="link">
-                    <h2>Newsroom</h2>
-                    <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
-                </a>
-                <a class="link">
-                    <h2>Our Business</h2>
-                    <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
-                </a>
+                <div class="item">
+                    <a class="link" href="#">
+                        <h2>Stories</h2>
+                        <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="link" href="#">
+                        <h2>Jobs</h2>
+                        <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="link" href="#">
+                        <h2>Newsroom</h2>
+                        <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="link" href="#">
+                        <h2>Our Business</h2>
+                        <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="" />
+                    </a>
+                </div>
+
+
+
             </div>
         </nav>
 
@@ -104,7 +119,7 @@
     <main class="sections-container">
 
         <!-- sezione iniziale -->
-        <section class="box-container-3-col">
+        <section class="hero">
             <!-- box 1 -->
             <a href="" class="box box-first box-2-3">
                 <img alt="An assortment of brightly coloured home products from the TESAMMANS collection such as lamps, glasses, clock and more."
@@ -135,7 +150,38 @@
             </a>
 
             <!-- box 2 -->
-            <a href="" class="box box-first" style="background-color: #ffdb00;">
+            <a href="#" class="go-shopping box box-first">
+                <header>
+                    <h2>Go shopping</h2>
+                    <button class="ico-btn">
+                        <img class="ico" src="assets/images/icons/arrow_forward.svg" alt="">
+                    </button>
+                </header>
+
+                <section class="center-items center-items-hidden">
+                    <div class="search">
+                        <input type="text" placeholder="Find online store">
+                        <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="">
+                    </div>
+                    <section class="region-selector">
+                        <button>ikea.nl <span>(Netherlands)</span></button>
+                        <button>ikea.nl <span>(English)</span></button>
+                        <button>ikea.fr</button>
+                        <button>ikea.de</button>
+                        <button>ikea.at <span>(Deutsch)</span></button>
+                        <button>ikea.at <span>(English)</span></button>
+                    </section>
+                </section>
+
+                <footer>
+                    <script src="js/toggle-hero-go-shopping.js"></script>
+                    <div class="left-items">
+                        <p>Store:</p>
+                        <p class="selected-store">ikea.it</p>
+                    </div>
+                    <img class="ico" src="assets/images/icons/arrow_forward_FILL0_wght500_GRAD0_opsz24.svg" alt="">
+                </footer>
             </a>
         </section>
         <!-- fine sezione iniziale -->
