@@ -65,12 +65,14 @@ h2 {
 }
 /* ---- inizio sezioni e box ----- ----*/
 .box-container-2-col {
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--box-gap);
     margin-bottom: var(--box-gap);
 }
 .hero {
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--box-gap);
@@ -81,6 +83,7 @@ h2 {
 }
 
 .box-container-1-col {
+    box-sizing: border-box;
     margin-bottom: var(--box-gap);
     gap: var(--box-gap);
 }
@@ -90,6 +93,7 @@ h2 {
 .box {
     display: flex;
     align-items: flex-end;
+    box-sizing: border-box;
     width: 100%;
     position: relative;
     border-radius: var(--border-radius-def);
@@ -109,6 +113,7 @@ h2 {
     max-height: calc(var(--box-container-max-width) / 2 * 1.07);
 }
 .box-first {
+    box-sizing: border-box;
     height: calc(100svh - 7.2rem);
     min-height: 28rem;
 }
@@ -655,6 +660,7 @@ footer .bottom-box .info a {
 }
 
 .mobile-nav .go-shopping .region-selector::-webkit-scrollbar-thumb {
+    border-radius: 8px;
     background: rgba(0, 0, 0, 0.5);
 }
 .mobile-nav .go-shopping .region-selector::-webkit-scrollbar-button {
@@ -672,7 +678,10 @@ footer .bottom-box .info a {
     padding: 0.7rem;
     border-radius: var(--border-radius-def);
     background: #fff094;
-    transition: all 0.4s ease;
+    transition:
+        height 0.4s ease,
+        padding 0.4s ease,
+        margin 0.4s ease;
     overflow: hidden;
 }
 .mobile-nav .go-shopping .center-items-hidden {
@@ -680,7 +689,10 @@ footer .bottom-box .info a {
     padding: 0 0.7rem;
     height: 0;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition:
+        height 0.4s ease,
+        padding 0.4s ease,
+        margin 0.4s ease;
 }
 .mobile-nav .go-shopping .search input {
     width: 100%;
@@ -726,10 +738,10 @@ footer .bottom-box .info a {
     background-color: #ffdb00;
     font-family: inherit;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 .mobile-nav .go-shopping footer:hover {
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
     background-color: #fff193;
 }
 .mobile-nav .go-shopping .while-selector-visible {
@@ -746,10 +758,6 @@ footer .bottom-box .info a {
 .mobile-nav .go-shopping footer .left-items .selected-store {
     font-family: "Noto IKEA Latin Bold";
 }
-
-
-
-
 
 .hero .go-shopping {
     width: 100%;
@@ -812,6 +820,7 @@ footer .bottom-box .info a {
 
 .hero .go-shopping .region-selector::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 .hero .go-shopping .region-selector::-webkit-scrollbar-button {
     background: rgba(0, 0, 0, 0.5);
@@ -826,12 +835,15 @@ footer .bottom-box .info a {
     flex-direction: column;
     width: calc(100% - 2.5rem);
     height: 80%;
-    max-height:fit-content;
-    margin: 1rem;
+    max-height: fit-content;
+    margin: 1.25rem;
     padding: 0.7rem;
     border-radius: var(--border-radius-def);
     background: #fff094;
-    transition: all 0.4s ease;
+    transition:
+        height 0.4s ease,
+        padding 0.4s ease,
+        margin 0.4s ease;
     overflow: hidden;
 }
 .hero .go-shopping .center-items-hidden {
@@ -839,7 +851,10 @@ footer .bottom-box .info a {
     padding: 0 0.7rem;
     height: 0;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition:
+        height 0.4s ease,
+        padding 0.4s ease,
+        margin 0.4s ease;
 }
 .hero .go-shopping .search input {
     width: 100%;
@@ -887,10 +902,10 @@ footer .bottom-box .info a {
     background-color: #ffdb00;
     font-family: inherit;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 .hero .go-shopping footer:hover {
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
     background-color: #fff193;
 }
 .hero .go-shopping .while-selector-visible {
