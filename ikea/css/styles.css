@@ -136,7 +136,7 @@ nav .link:hover {
   padding: 24px 8% 24px 20px;
   color: white;
   transition: 500ms transform ease;
-  transform: translate(-64px);
+  transform: translateX(-64px);
 }
 .box .items-dark,
 .box-fancy .items-dark {
@@ -178,11 +178,10 @@ nav .link:hover {
 .box .bottom-items .material-symbols-outlined {
     font-size: 48px;
     font-weight: 500;
-    margin-top: 1rem;
     margin-left: 16px;
     opacity: 1;
     transition: transform 400ms ease;
-    transform: translate(-0.5em);
+    transform: translateX(-0.5em);
 }
 
 .box-fancy .left-items .material-symbols-outlined {
@@ -192,7 +191,7 @@ nav .link:hover {
     margin-left: 16px;
     opacity: 1;
     transition: 400ms ease;
-    transform: translate(-1.2em);
+    transform: translateX(-1.2em);
 }
 
 /* inizio CSS fancy box */
