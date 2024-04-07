@@ -955,15 +955,13 @@ footer .bottom-box .info a {
 
 /* media query 1330px modifiche unicamente a "go-shopping" */
 /* da modificare: padding e dimensione testo*/
-@media screen and (max-width: 1330px) {
- color: inherit;
-    
+@media screen and (max-width: 1330px) {    
     .hero .go-shopping > header {
         padding: 1rem 3.125rem 1rem 3.125rem; /* da modificare */
         min-height: 3rem;
     }
     .hero .go-shopping footer {
-
+        padding: 0 ; /* da modificare*/
     }
 }
 
