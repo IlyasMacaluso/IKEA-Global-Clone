@@ -1,4 +1,4 @@
-const mobileNavOpenBtn = document.querySelector(".mobile-ico")
+const mobileNavOpenBtn = document.querySelector(".hamburger-menu")
 const mobileNav = document.querySelector(".mobile-nav")
 const mobileNavCloseBtn = document.querySelector (".mobile-nav .close")
 const overlayAll = document.querySelector(".overlay-all")
