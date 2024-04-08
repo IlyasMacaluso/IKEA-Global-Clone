@@ -6,11 +6,15 @@
     --nav-bg: black;
     --border-radius-def: 8px;
     --box-container-max-width: 90rem;
-    --box-gap: 1.25rem;
+    --grid-gap: 1.25rem;
     --box-height-high: 52vw;
     --box-height-def: 47vw;
     --box-height-low: 40vw;
-    --container-spacing-desktop: 1.5rem;
+    --carousel-height: 30vw;
+    --nav-height: 6rem;
+    --height-square-image: calc(90rem* 0.66 - 2rem);
+    --protrait-two-col: calc( calc( ( 90rem - ( 1.5rem * 2) - 1.25rem ) / 2 ) * 1.1);
+    --square-two-col: calc( ( 90rem - ( 1.5rem * 2) - 1.25rem ) / 2 );
      -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -30,6 +34,7 @@
     --color-text-black: #000;
     --color-text-light: #fffefb;
     --color-grey: #dfdfdf;
+
     --color-grey-dark: #999999;
    
 }
