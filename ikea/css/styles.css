@@ -404,6 +404,10 @@ p {
 
 /* ------- fine CSS carosello ----------*/
 
+/* ------- inizio footer alessandro ----------*/
+
+      /* ------- inizio top box footer ----------*/
+
 footer .top-box {
   display: flex;
   flex-direction: column;
@@ -423,6 +427,10 @@ footer .top-box svg {
   margin: 2.5rem auto 5rem;
   height: auto;
 }
+
+      /* ------- fine top box footer ----------*/
+
+      /* ------- inizio room box footer ----------*/
 
 footer .room-box {
   position: relative;
@@ -447,6 +455,10 @@ footer .room-img-lights {
   right: 0;
 }
 
+.lights-off {
+  visibility: hidden;
+}
+
 footer .switch-box {
   position: absolute;
   top: 0;
@@ -457,39 +469,54 @@ footer .switch-box {
 
 footer .switch-box .switch-1 {
   position: absolute;
-  width: 1.5em;
-  height: 1.5em;
-  bottom: 37%;
-  left: 25%;
-  display: block;
-}
-
-footer .switch-box .light-switch-1 {
-  position: absolute;
-  width: 8.5em;
-  height: 4.4em;
-  bottom: 28.75%;
-  left: 21.95%;
-  display: block;
+  bottom: 35%;
+  left: 24.8%;
 }
 
 footer .switch-box .switch-2 {
   position: absolute;
-  width: 1.5em;
-  height: 1.5em;
-  bottom: 25%;
-  right: 29%;
-  display: block;
+  bottom: 20%;
+  right: 12%;
 }
 
 footer .switch-box .switch-3 {
   position: absolute;
-  width: 1.5em;
-  height: 1.5em;
-  bottom: 15%;
-  right: 5%;
-  display: block;
+  bottom: 18%;
+  right: -11.8%;
 }
+
+footer .switch-box .switch-button-1,
+footer .switch-box .switch-button-2,
+footer .switch-box .switch-button-3
+ {
+  width: 12%;
+  position: relative;
+  border: none;
+  background-color: white;
+}
+
+footer .switch-box .light-switch-1,
+footer .switch-box .light-switch-2,
+footer .switch-box .light-switch-3 {
+  position: absolute;
+  width: 200%;
+  bottom: 0;
+  left: -47%;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+footer .switch-box .switch-button-1:hover .light-switch-1,
+footer .switch-box .switch-button-2:hover .light-switch-2,
+footer .switch-box .switch-button-3:hover .light-switch-3 {
+  display: block;
+  cursor: pointer;
+}
+
+      /* ------- fine room box footer ----------*/
+
+      /* ------- inizio bottom box footer ----------*/
 
 footer .bottom-box {
   display: flex;
@@ -537,5 +564,7 @@ footer .bottom-box .info a {
   color: white;
   font-size: 0.7rem;
 }
+
+      /* ------- fine bottom box footer ----------*/
 
 /* -----------------fine footer alessandro */
