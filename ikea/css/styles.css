@@ -1024,6 +1024,10 @@ footer .bottom-box .info a {
         transition: none;
         transform: translateX(0);
     }
+    .box-fancy .left-items {
+        transition: none;
+        transform: translateX(0);
+    }
     .box:hover .bottom-items,
     .box-fancy:hover .left-items {
         transform: translateX(0);
@@ -1032,7 +1036,8 @@ footer .bottom-box .info a {
     .box-fancy:hover .left-items .ico {
         transform: translate(0);
     }
-    .box .bottom-items .ico {
+    .box .bottom-items .ico,
+    .box-fancy .left-items .ico {
         display: none;
     }
 }
