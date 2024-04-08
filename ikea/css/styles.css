@@ -19,6 +19,33 @@ body {
 }
 h2 {
     font-family: "Noto IKEA Latin Bold";
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+.p-multi-line {
+    font-size: 1rem;
+    line-height: 162.5%;
+}
+.title-medium {
+    font-size: 2.25rem;
+    line-height: 120%;
+    letter-spacing: -0.06rem;
+}
+.title-big {
+    font-size: 3.1875rem;
+    line-height: 108%;
+    letter-spacing: -0.0925rem;
+}
+.title-bigger {
+    font-size: 4.5rem;
+    line-height: 108%;
+    letter-spacing: -0.115rem;
 }
 /*--- inizio nav e propri contenuti*/
 .navbar {
@@ -93,20 +120,15 @@ h2 {
 }
 
 /* ---- struttura delle box singole ---- ---- ---- */
+
 /* impostazione contenitore genitore */
 .box {
     display: flex;
-    align-items: flex-end;
-    box-sizing: border-box;
     width: 100%;
     position: relative;
     border-radius: var(--border-radius-def);
     text-decoration: none;
     overflow: hidden;
-}
-.box-short {
-    height: var(--box-height-low);
-    max-height: calc(var(--box-container-max-width) / 2.2);
 }
 .square-two-col {
     height: var(--square-two-col);
@@ -114,11 +136,7 @@ h2 {
 .protrait-two-col {
     height: var(--protrait-two-col);
 }
-.box-tall {
-    height: var(--box-height-high);
-    max-height: calc(var(--box-container-max-width) / 2 * 1.07);
-}
-.box-first {
+.box-hero {
     height: 100%;
     box-sizing: border-box;
 }
@@ -130,7 +148,6 @@ h2 {
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
-    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 /*gradiente semi trasparente (sopra lo sfondo, ma dietro il testo)*/
@@ -150,7 +167,8 @@ h2 {
 /*soprattitolo, titolo e freccetta*/
 .box .bottom-items {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
+    height: fit-content;
     width: 100%;
     padding: 1.5rem;
     color: white;
@@ -168,23 +186,6 @@ h2 {
 }
 .box .items-light p {
     text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.7);
-}
-.box .bottom-items h2,
-.box-fancy .left-items h2 {
-    font-size: 2.2rem;
-    letter-spacing: -0.03rem;
-    margin: 0;
-    line-height: 120%;
-}
-.box .bottom-items p {
-    margin: 0;
-}
-.box .bottom-items .title-big,
-.box-fancy .left-items .title-big {
-    font-size: 3.2rem;
-    margin: 0;
-    line-height: 108%;
-    letter-spacing: -0.1rem;
 }
 
 /*freccetta*/
@@ -212,7 +213,6 @@ h2 {
     position: relative;
     height: 34rem;
 }
-
 .box-fancy .left-items {
     position: absolute;
     display: flex;
@@ -221,13 +221,9 @@ h2 {
     transition: 500ms transform ease;
     transform: translateX(-64px);
 }
-.box-fancy .left-items h2 {
-    font-size: 2.25rem;
-}
+
 .box-fancy .left-items .title-huge {
     max-width: 8ch;
-    font-size: 4.4rem;
-    line-height: 108%;
 }
 
 .box-fancy .right-items {
@@ -253,19 +249,11 @@ h2 {
     background: #000;
 }
 /* ----  animazione freccetta ---- ---- ---- */
-.box:hover .bottom-items {
-    transform: translateX(0);
-}
-.box:hover .bottom-items .ico {
-    transform: translate(0);
-    transition:
-        transform 400ms,
-        opacity 200ms;
-    opacity: 100%;
-}
+.box:hover .bottom-items,
 .box-fancy:hover .left-items {
     transform: translateX(0);
 }
+.box:hover .bottom-items .ico,
 .box-fancy:hover .left-items .ico {
     transform: translate(0);
     transition:
@@ -299,24 +287,10 @@ h2 {
     max-width: 30%;
     margin-right: 1.75rem;
 }
-.carousel .left-items h2,
-.carousel .left-items p {
-    margin: 0;
-    padding: 0;
-}
-.carousel .left-items h2 {
-    font-size: 2.25rem;
-    line-height: 120%;
-    letter-spacing: -0.08rem;
-}
-.carousel .left-items p {
-    line-height: 160%;
-}
 
 .carousel .right-items {
     display: flex;
     align-items: center;
-
     position: relative;
 }
 .carousel .right-items .button-right,
@@ -412,11 +386,6 @@ p {
 .carousel .card .bottom-items-spacious {
     height: 20%;
 }
-.carousel .left-items-bigger h2 {
-    font-size: 3.175rem;
-    line-height: 105%;
-}
-
 /* ------- fine CSS carosello ----------*/
 
 footer .top-box {
@@ -567,7 +536,7 @@ footer .bottom-box .info a {
     align-items: center;
     width: 100%;
     height: 6rem;
-    margin-bottom: calc(1rem* -1);
+    margin-bottom: calc(1rem * -1);
     box-sizing: border-box;
 }
 .mobile-nav > header .close {
@@ -992,7 +961,6 @@ footer .bottom-box .info a {
         font-size: 1.5625rem;
         line-height: 120%;
         margin: 1rem 0;
-        font-weight: 700;
         letter-spacing: -0.03375rem;
         margin: 0;
     }
@@ -1019,6 +987,10 @@ footer .bottom-box .info a {
 /* media query 1088px tablet mode */
 /* da modificare: dimesione testo box */
 @media screen and (max-width: 1088px) {
+    .title-medium {
+        font-size: 1.5625rem;
+        letter-spacing: -0.03375rem;
+    }
     .navbar .links-container .link {
         display: none;
     }
@@ -1026,26 +998,41 @@ footer .bottom-box .info a {
     .hamburger-menu {
         display: flex;
     }
-    .box .bottom-items h2 {
-        font-size: 1.5625rem;
+    .box-fancy .title-medium {
+        font-size: 2.25rem;
         line-height: 120%;
-        letter-spacing: -0.03375rem;
+        letter-spacing: -0.06rem;
     }
-    .carousel .left-items h2,
-    .carousel .left-items-bigger h2 {
-        font-size: 1.5625rem;
-        letter-spacing: -0.03375rem;
-    }
-
-    .box-fancy .left-items .title-huge {
+    .box-fancy .left-items .title-bigger {
         font-size: 3.1875rem;
         line-height: 108%;
         margin: 1rem 0;
         letter-spacing: -0.0925rem;
+        max-width: 8ch;
     }
-    .box .bottom-items .title-big {
+    .box .title-big {
         font-size: 1.5625rem;
-        line-height: 120%;
         letter-spacing: -0.03375rem;
+    }
+    .carousel .title-big {
+        font-size: 1.5625rem;
+        letter-spacing: -0.03375rem;
+    }
+    /* rimozione animazioni freccetta */
+    .box .bottom-items {
+        padding: 1rem;
+        transition: none;
+        transform: translateX(0);
+    }
+    .box:hover .bottom-items,
+    .box-fancy:hover .left-items {
+        transform: translateX(0);
+    }
+    .box:hover .bottom-items .ico,
+    .box-fancy:hover .left-items .ico {
+        transform: translate(0);
+    }
+    .box .bottom-items .ico {
+        display: none;
     }
 }
