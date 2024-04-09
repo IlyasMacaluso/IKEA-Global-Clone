@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="css/landing.css" />
     <link rel="stylesheet" href="css/nav-and-mobile-nav.css">
     <link rel="stylesheet" href="css/footer.css">
-    
+
 </head>
 
 <body>
     <div class="overlay-all"></div>
     <header>
-        <!-- inizio nav bar (gruppo) -->
+        <!-- inizio navbar (gruppo) -->
         <nav class="navbar">
             <!-- contenitore links -->
             <section class="links-container">
@@ -39,7 +39,49 @@
                 <a class="link" href="#self">Newsroom</a>
                 <a class="link" href="#self">Our business</a>
             </section>
-            <button class="hamburger-menu"> 
+
+            <!-- bottone go-shopping -->
+            <div class="button-container">
+                <a href="#self" class="go-shopping">
+                    <section class="top-items">
+                        <section class="left-items">
+                            <p>Go shopping:</p>
+                            <p class="selected-store">ikea.it</p>
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                        </section>
+                        <section class="right-items">
+                            <button class="ico-btn">
+                                <span class="material-symbols-outlined ico" style="color: white;">
+                                    arrow_forward
+                                </span>
+                            </button>
+                        </section>
+                    </section>
+
+                        <section class="bottom-items bottom-items-hidden">
+                            <div class="search">
+                                <input type="text" placeholder="Find online store">
+                                <span class="material-symbols-outlined ico">
+                                    search
+                                </span>
+                            </div>
+                            <section class="region-selector">
+                                <button class="item">ikea.nl <span>(Netherlands)</span></button>
+                                <button class="item">ikea.nl <span>(English)</span></button>
+                                <button class="item">ikea.fr</button>
+                                <button class="item">ikea.de</button>
+                                <button class="item">ikea.at <span>(Deutsch)</span></button>
+                                <button class="item">ikea.at <span>(English)</span></button>
+                            </section>
+                        </section>
+
+                </a>
+            </div>
+
+
+            <button class="hamburger-menu">
                 <span class="material-symbols-outlined ico">
                     menu
                 </span>
@@ -1228,6 +1270,7 @@
     <script src="js/toggle-mobile-nav.js"></script>
     <script src="js/toggle-mobile-nav-go-shopping.js"></script>
     <script src="js/toggle-hero-go-shopping.js"></script>
+    <script src="js/navbar-scroll.js"></script>
 </body>
 
 </html>
