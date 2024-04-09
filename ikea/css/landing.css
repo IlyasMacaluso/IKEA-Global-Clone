@@ -7,11 +7,19 @@
         url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.woff") format("woff");
 }
 
+.material-symbols-outlined {
+    line-height: 110%;
+    font-size: 24px;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
 img,
 svg {
     display: block;
 }
-
 body {
     margin: 0;
     font-family: var(--ikea-font);
@@ -121,10 +129,6 @@ p {
     border-bottom: 2px solid white;
     min-height: 3rem;
 }
-.hero-section .go-shopping header .ico {
-    height: 24px;
-    width: 24px;
-}
 .hero-section .go-shopping header h2 {
     font-size: 2.25rem;
     letter-spacing: -0.05rem;
@@ -134,12 +138,22 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2.5rem;
     width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
     background-color: #000;
-    border-radius: 2rem;
+    border-radius: 2.5rem;
     box-sizing: border-box;
     border: none;
+    padding: 0;
+}
+
+.hero-section .go-shopping header .material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 32;
 }
 .hero-section .go-shopping .search {
     position: relative;
@@ -169,7 +183,7 @@ p {
     height: 80%;
     max-height: fit-content;
     margin: 1.25rem;
-    padding: 0.7rem;
+    padding: 0.6rem;
     border-radius: var(--border-radius-def);
     background: #fff094;
     transition:
@@ -199,7 +213,7 @@ p {
 }
 .hero-section .go-shopping .search .ico {
     position: absolute;
-    left: 1rem;
+    left: 0.5rem;
     bottom: 25%;
     height: 1.25rem;
     width: 1.25rem;
@@ -235,6 +249,14 @@ p {
     font-family: inherit;
     align-items: center;
     transition: background 0.3s ease-in-out;
+}
+.hero-section .go-shopping footer .material-symbols-outlined {
+    font-size: 32px;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 32;
 }
 .hero-section .go-shopping footer:hover {
     transition: background 0.3s ease-in-out;
@@ -464,7 +486,7 @@ p {
     gap: var(--grid-gap);
     overflow-x: scroll;
 }
-                /*  
+/*  
                 può tornare utile per lo scroll con i bottoni :
                     .gallery { scroll-snap-type: inline mandatory;}
                     .gallery > * { scroll-snap-align: start;} 
