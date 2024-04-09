@@ -293,7 +293,8 @@ p {
 /* -------- inizio box "drop" Andrea Audisio */
 .box .drop-items {
     display: flex;
-    align-self:center;
+    align-self:flex-end;
+    margin-bottom: 15%;
     align-items: flex-end;
     height: 60%;
     width: 100%;
