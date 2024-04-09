@@ -16,6 +16,7 @@ body {
     margin: 0;
     font-family: var(--ikea-font);
     background-color: var(--color-background);
+    overflow-x: hidden;
 }
 h2 {
     font-family: "Noto IKEA Latin Bold";
