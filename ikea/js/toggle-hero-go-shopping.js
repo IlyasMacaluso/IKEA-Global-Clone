@@ -1,5 +1,5 @@
-const heroGSFooter = document.querySelector(".hero .go-shopping footer")
-const heroGSCenterItems = document.querySelector(".hero .go-shopping .center-items")
+const heroGSFooter = document.querySelector(".hero-section .go-shopping footer")
+const heroGSCenterItems = document.querySelector(".hero-section .go-shopping .center-items")
 
 console.log(heroGSFooter)
 console.log(heroGSCenterItems)
