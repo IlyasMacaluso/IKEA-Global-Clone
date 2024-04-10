@@ -634,3 +634,39 @@ p {
         display: none;
     }
 }
+
+
+/* -------- media query 768px mobile mode */
+@media screen and (max-width: 768px) {
+
+/*                   inizio-layout */
+
+    .box-container-2-col, 
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+/*                   fine-layout */
+
+/*                   inizio-testo */
+
+    .text {
+        font-size: 0.75rem;
+    }
+
+    .title-medium {
+        font-size: 1.25rem;
+    }
+
+    .title-big {
+        font-size: 1.25rem;
+    }
+
+    .title-bigger {
+        font-size: 1.5625rem;
+    }
+
+ /*                   fine-testo */
+
+}
