@@ -20,7 +20,7 @@
     height: var(--nav-height);
     position: fixed;
     z-index: 11;
-    top: 0;
+    top: -1px;
     left: 50%;
     transform: translateX(-50%);
     transition: transform 200ms cubic-bezier(1, 0.26, 0.51, 0.72);
