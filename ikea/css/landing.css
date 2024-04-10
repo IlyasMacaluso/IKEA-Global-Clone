@@ -21,7 +21,7 @@ svg {
     display: block;
 }
 body {
-    margin: 0;
+    margin: var(--nav-height) 0 0 0;
     font-family: var(--ikea-font);
     background-color: var(--color-background);
     overflow-x: hidden;
