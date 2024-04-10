@@ -1,18 +1,20 @@
 :root {
-    
-    /*def = default*/
-    --ikea-font: "Noto IKEA","Noto Sans Japanese","Roboto","Open Sans",system-ui,sans-serif !important;
-    --button-color: rgb(0, 123, 39);
-    --nav-bg: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    /*custom properties */
+    --ikea-font: "Noto IKEA", "Noto Sans Japanese", "Roboto", "Open Sans", system-ui, sans-serif !important;
     --border-radius-def: 8px;
     --box-container-max-width: 90rem;
-    --box-gap: 1.25rem;
-    --box-height-high: 52vw;
-    --box-height-def: 47vw;
-    --box-height-low: 40vw;
-    --carousel-height: 30vw;
-    --container-spacing-desktop: 1.5rem;
+    --grid-gap: 1.25rem;
 
+    /* altezza elementi */
+    --nav-height: 6rem;
+    /* altezza box */
+    --height-square-image: calc(90rem * 0.66 - 2rem);
+    --protrait-two-col: calc(calc((90rem - (1.5rem * 2) - 1.25rem) / 2) * 1.1);
+    --square-two-col: calc((90rem - (1.5rem * 2) - 1.25rem) / 2);
 
     /*colori ikea ufficiali*/
     --color-logo: #fae6e6;
@@ -27,7 +29,14 @@
     --color-text-dark: rgba(0, 0, 0, 0.74);
     --color-text-darker: #111111;
     --color-text-black: #000;
+    --color-text-light: #fffefb;
     --color-grey: #dfdfdf;
     --color-grey-dark: #999999;
-    
+    --button-color: rgb(0, 123, 39);
+}
+
+@font-face {
+    font-family: "Noto IKEA";
+    src: url("https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-400.latin.647e877d.woff2")
+        format("woff2");
 }
