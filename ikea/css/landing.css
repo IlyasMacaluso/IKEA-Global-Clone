@@ -634,6 +634,26 @@ p {
         font-size: 1.5625rem;
         letter-spacing: -0.03375rem;
     }
+
+    /* --------- modifiche dimensioni / padding box */
+    .sections-container {
+        padding: 0 1rem;
+    }
+    .hero-section {
+        grid-template-columns: calc(60vw - 2rem) 1fr;
+        grid-template-rows: calc(60vw - 2rem);
+        height: fit-content;
+    }
+    .box-hero{
+        grid-column: 1;
+    }
+    .hero-section .go-shopping{
+        grid-column: 2;
+    }
+    .hero-section .go-shopping > header {
+        padding: 0 1.25rem;
+    }
+
     /* -------- rimozione animazioni freccetta */
     .box .bottom-items {
         padding: 1rem;
@@ -655,5 +675,18 @@ p {
     .box .bottom-items .ico,
     .box-fancy .left-items .ico {
         display: none;
+    }
+}
+@media screen and (max-width: 860px){
+    .hero-section {
+        grid-template-columns: calc(60vw - 2rem) 1fr;
+        grid-template-rows: 1fr;
+        height: fit-content;
+    }
+    .box-hero{
+        grid-column: 1;
+    }
+    .hero-section .go-shopping{
+        grid-column: 2;
     }
 }

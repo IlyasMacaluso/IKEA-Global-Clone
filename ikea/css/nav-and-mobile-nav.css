@@ -456,6 +456,9 @@
 /* fine mobile-nav ilyas macaluso */
 
 @media screen and (max-width: 1088px) {
+    .navbar {
+        padding: 0 1rem;
+    }
     .navbar .links-container .link {
         display: none;
     }
