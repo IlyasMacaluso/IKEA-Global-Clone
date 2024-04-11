@@ -1,11 +1,5 @@
 @import "root.css";
-@font-face {
-    font-family: "Noto IKEA Latin Bold";
-    src:
-        url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.woff2")
-            format("woff2"),
-        url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.woff") format("woff");
-}
+
 
 .material-symbols-outlined {
     line-height: 110%;
@@ -316,7 +310,7 @@ p {
 /* -------- inizio box "drop" Andrea Audisio */
 .box .drop-items {
     display: flex;
-    align-self:flex-end;
+    align-self: flex-end;
     margin-bottom: 15%;
     align-items: flex-end;
     height: 60%;
@@ -328,16 +322,16 @@ p {
     overflow:visible; */
 }
 
-.text .drop-h2{
+.text .drop-h2 {
     word-wrap: break-word;
     font-size: 3.1875rem;
     line-height: 108%;
-    margin:  1rem 0;
+    margin: 1rem 0;
     font-weight: 700;
     letter-spacing: -0.0925rem;
 }
 
-.drop{
+.drop {
     width: 95%;
     height: 95%;
     border-radius: 50% 50% 0.5rem;
@@ -346,7 +340,7 @@ p {
 
 .drop-container:hover .bottom-items,
 .box-fancy:hover .left-items {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 .drop-container:hover .bottom-items .ico,
 .box-fancy:hover .left-items .ico {
@@ -675,10 +669,10 @@ p {
         grid-template-rows: calc(60vw - 2rem);
         height: fit-content;
     }
-    .box-hero{
+    .box-hero {
         grid-column: 1;
     }
-    .hero-section .go-shopping{
+    .hero-section .go-shopping {
         grid-column: 2;
     }
     .hero-section .go-shopping > header {
@@ -708,16 +702,16 @@ p {
         display: none;
     }
 }
-@media screen and (max-width: 860px){
+@media screen and (max-width: 860px) {
     .hero-section {
         grid-template-columns: calc(60vw - 2rem) 1fr;
         grid-template-rows: 1fr;
         height: fit-content;
     }
-    .box-hero{
+    .box-hero {
         grid-column: 1;
     }
-    .hero-section .go-shopping{
+    .hero-section .go-shopping {
         grid-column: 2;
     }
 }
