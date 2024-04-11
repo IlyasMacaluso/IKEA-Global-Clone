@@ -1,14 +1,26 @@
 /* ------- inizio footer alessandro ----------*/
 
+footer {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
 /* ------- inizio top box footer ----------*/
 footer .top-box {
   display: flex;
   flex-direction: column;
   place-items: center;
 }
+
 footer .top-box .text {
+  font-size: 1.5625rem;
   line-height: 120%;
   margin: 0;
+  font-weight: 700;
   letter-spacing: -0.03375rem;
   text-align: center;
   padding: 0 2em;
@@ -103,23 +115,24 @@ footer .switch-box .switch-button-3:hover .light-switch-3 {
 footer .bottom-box {
   display: flex;
   flex-direction: column;
-  gap: 4em;
-  padding: 24px;
+  padding: 5rem 2rem 2rem;
   background-color: var(--color-ikea-blue);
 }
 footer .bottom-box .links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 24px;
+  margin-bottom: 5rem;
 }
 footer .bottom-box .links a {
   text-decoration: none;
   color: white;
-  padding: 0 0.75rem;
+  padding: 0 1.5rem 0 1.5rem;
   margin: 0;
-  border-right: 1px solid white;
-  font-size: 1.25rem;
+  border-right: 2px solid var(--color-ikea-footer-line);
+  font-size: 1.5625rem;
+  line-height: 162.5%;
+  font-weight: 400;
   min-width: max-content;
 }
 footer .bottom-box .links a:last-child {
@@ -128,15 +141,20 @@ footer .bottom-box .links a:last-child {
 footer .bottom-box .info {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   font-size: 1rem;
 }
 footer .bottom-box .info .center {
   display: flex;
-  gap: 2px;
+  gap: 0.5rem;
   color: white;
 }
+
+.bi-c-circle {
+  font-size: 80%;
+}
+
 footer .bottom-box .info a {
   text-decoration: none;
   color: white;
-  font-size: 0.7rem;
 }
