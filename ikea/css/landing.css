@@ -705,10 +705,28 @@ p {
     height: 45vw;
   }
 
-  .drop-container .box {
+  .drop-container .box,
+  .carousel {
     height: 45vw;
   }
 
+  .carousel {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .carousel .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel .left-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    border: solid;
+  }
   /*                   fine-layout */
 
   /*                   inizio-testo */
