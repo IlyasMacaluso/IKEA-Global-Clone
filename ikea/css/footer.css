@@ -1,5 +1,14 @@
 /* ------- inizio footer alessandro ----------*/
 
+.body-footer {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
 /* ------- inizio top box footer ----------*/
 footer .top-box {
   display: flex;
@@ -138,5 +147,43 @@ footer .bottom-box .info .center {
 footer .bottom-box .info a {
   text-decoration: none;
   color: white;
-  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+.body-footer {
+    width: 100vw;
+  }
+
+footer .bottom-box .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer .bottom-box .links a {
+  font-size: 1rem;
+  line-height: 162.5%;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 0.25rem 0.75rem;
+  margin: 0;
+}
+
+footer .bottom-box .info {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .bottom-box .info .center,
+footer .bottom-box .info a {
+  padding: 0.3125rem;
+  width: auto;
+}
+
+footer .bottom-box .info .center {
+  order: 2;
+}
+
 }
