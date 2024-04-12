@@ -1,6 +1,6 @@
 /* ------- inizio footer alessandro ----------*/
 
-.body-.body-footer {
+.body-footer {
   width: 100vw;
   max-width: 100%;
   display: flex;
@@ -160,7 +160,7 @@
 }
 
 @media screen and (max-width: 768px) {
-.body-.body-footer {
+.body-footer {
     width: 100vw;
   }
 
