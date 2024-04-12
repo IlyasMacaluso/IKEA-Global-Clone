@@ -716,9 +716,10 @@ p {
 }
 @media screen and (max-width: 860px) {
     .hero-section {
-        grid-template-columns: calc(60vw - 2rem) 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 28rem 1fr;
+        grid-template-rows: 28rem;
         height: fit-content;
+        max-height: fit-content;
     }
     .box-hero {
         grid-column: 1;
