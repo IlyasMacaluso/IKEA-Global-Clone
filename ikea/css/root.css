@@ -8,6 +8,10 @@
     --border-radius-def: 8px;
     --box-container-max-width: 90rem;
     --grid-gap: 1.25rem;
+    
+    /*sliding boxes*/
+    --box-animation-duration: 1s;
+    --box-animation-delay: 0.3s;
 
     /*sliding boxes*/
     --box-animation-duration: 1s;
@@ -15,6 +19,7 @@
 
     /* altezza elementi */
     --nav-height: 6rem;
+
     /* altezza box */
     --height-square-image: calc(90rem * 0.66 - 2rem);
     --protrait-two-col: calc(calc((90rem - (1.5rem * 2) - 1.25rem) / 2) * 1.1);
