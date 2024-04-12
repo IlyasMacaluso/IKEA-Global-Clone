@@ -707,26 +707,38 @@ p {
 
   .drop-container .box,
   .carousel {
-    height: 45vw;
+    height: 50vw;
+  }
+
+  .stretch-box {
+    display: grid;
+    margin-left: 0;
+    padding: 0;
   }
 
   .carousel {
     display: flex;
-    align-items: center;
-    margin: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: fit-content;
+    padding: 3.75rem 0 3.75rem 2.25rem;
   }
 
   .carousel .content {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem
   }
 
   .carousel .left-items {
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
-    border: solid;
+    min-width: 100%;
   }
+
+  
   /*                   fine-layout */
 
   /*                   inizio-testo */
