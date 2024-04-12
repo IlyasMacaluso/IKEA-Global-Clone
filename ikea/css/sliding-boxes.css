@@ -1,0 +1,20 @@
+@keyframes slideUp {
+    from {
+        transform: translateY(40%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.box {
+    animation-name: slideUp;
+    animation-fill-mode: both;
+    animation-duration: var(--box-animation-duration);
+    animation-delay: var(--box-animation-delay);
+    opacity: 0;
+    overflow-x: scroll;
+    animation-play-state: paused;
+}
