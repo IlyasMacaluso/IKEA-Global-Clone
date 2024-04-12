@@ -6,14 +6,12 @@
     url("https://db.onlinewebfonts.com/t/b269e509d0e2d442240b8df6035c9999.woff")
       format("woff");
 }
-
 img,
 svg {
   display: block;
 }
-
 body {
-  margin: 0;
+  margin-top:var(--nav-height);
   font-family: var(--ikea-font);
   background-color: var(--color-background);
   overflow-x: hidden;
@@ -230,6 +228,14 @@ p {
   align-items: center;
   transition: background 0.3s ease-in-out;
 }
+.hero-section .go-shopping footer .material-symbols-outlined {
+    font-size: 32px;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 32;
+}
 .hero-section .go-shopping footer:hover {
   transition: background 0.3s ease-in-out;
   background-color: #fff193;
@@ -322,7 +328,7 @@ p {
 
 .drop-container:hover .bottom-items,
 .box-fancy:hover .left-items {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 .drop-container:hover .bottom-items .ico,
 .box-fancy:hover .left-items .ico {
@@ -332,6 +338,9 @@ p {
 }
 
 /* -------- inizio box-fancy ilyas macaluso */
+.drop-container {
+    padding: 1.5rem;
+}
 .box-fancy {
   display: flex;
   align-items: center;
