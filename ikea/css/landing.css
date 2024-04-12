@@ -674,6 +674,7 @@ p {
         grid-template-columns: calc(60vw - 2rem) 1fr;
         grid-template-rows: calc(60vw - 2rem);
         height: fit-content;
+        max-height: fit-content;
     }
     .box-hero {
         grid-column: 1;
