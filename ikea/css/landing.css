@@ -1,6 +1,5 @@
 @import "root.css";
 
-
 .material-symbols-outlined {
     line-height: 110%;
     font-size: 24px;
@@ -674,6 +673,7 @@ p {
         grid-template-columns: calc(60vw - 2rem) 1fr;
         grid-template-rows: calc(60vw - 2rem);
         height: fit-content;
+        max-height: fit-content;
     }
     .box-hero {
         grid-column: 1;
