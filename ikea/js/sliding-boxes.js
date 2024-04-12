@@ -1,3 +1,6 @@
+const boxes = document.querySelectorAll(".box")
+const boxesFancy = document.querySelectorAll(".box-fancy")
+const carousels = document.querySelectorAll (".carousel")
 
 document.addEventListener("scroll", () => {
     boxes.forEach((box) => {
