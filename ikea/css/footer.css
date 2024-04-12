@@ -146,7 +146,8 @@
 }
 .body-footer .bottom-box .info .center {
   display: flex;
-  gap: 2px;
+  align-items: baseline;
+  gap: 0.5rem;
   color: white;
 }
 
