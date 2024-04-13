@@ -3,11 +3,6 @@ const boxesHero = document.querySelectorAll(".box-hero")
 const boxesFancy = document.querySelectorAll(".box-fancy")
 const carousels = document.querySelectorAll(".carousel")
 
-boxesHero.forEach((boxHero) => {
-    boxHero.style.visibility = "visible"
-    boxHero.style.animationPlayState = "running"
-})
-
 /* funzione che anima tutti gli elementi all'interno di una nodeList che passiamo come parametro */
 function slideAnimation(node) {
     node.forEach((element) => {
@@ -22,11 +17,14 @@ function slideAnimation(node) {
     })
 }
 
+//animazione al caricamento della pagina
 window.addEventListener("load", () => {
     slideAnimation(boxes)
     slideAnimation(boxesFancy)
     slideAnimation(carousels)
 })
+
+//animazioni allo scroll
 document.addEventListener("scroll", () => {
     slideAnimation(boxes)
     slideAnimation(boxesFancy)
