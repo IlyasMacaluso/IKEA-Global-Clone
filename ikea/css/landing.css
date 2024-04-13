@@ -76,6 +76,7 @@ p {
     box-sizing: border-box;
     margin-bottom: var(--grid-gap);
     gap: var(--grid-gap);
+    height: fit-content;
 }
 .box-container-2-col {
     box-sizing: border-box;
@@ -361,7 +362,6 @@ p {
     justify-content: flex-end;
     padding: 6.25rem 3.75rem;
     border-radius: var(--border-radius-def);
-    margin-bottom: var(--grid-gap);
     position: relative;
     height: 34rem;
 }
