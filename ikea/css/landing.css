@@ -1,6 +1,5 @@
 @import "root.css";
 
-
 .material-symbols-outlined {
     line-height: 110%;
     font-size: 24px;
@@ -505,7 +504,7 @@ p {
 }
 
 .carousel .right-items .hidden,
-.carousel .right-items .hidden{
+.carousel .right-items .hidden {
     opacity: 0;
 }
 .carousel .right-items .button-right:hover,
@@ -725,126 +724,158 @@ p {
 }
 
 @media screen and (max-width: 860px) {
-  .hero-section {
-      grid-template-columns: calc(60vw - 2rem) 1fr;
-      grid-template-rows: 1fr;
-      height: fit-content;
-  }
-  .box-hero {
-      grid-column: 1;
-  }
-  .hero-section .go-shopping {
-      grid-column: 2;
-  }
+    .hero-section {
+        grid-template-columns: calc(60vw - 2rem) 1fr;
+        grid-template-rows: 1fr;
+        height: fit-content;
+    }
+    .box-hero {
+        grid-column: 1;
+    }
+    .hero-section .go-shopping {
+        grid-column: 2;
+    }
 }
 
 /* -------- media query 768px mobile mode */
 @media screen and (max-width: 768px) {
-  /*                   inizio-layout */
-  .sections-container {
-    padding: 0 1rem;
-  }
-  .box-container-2-col,
-  .box-container-1-col,
-  .hero-section {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+    /*                   inizio-layout */
+    .sections-container {
+        padding: 0 1rem;
+    }
 
-  .protrait-two-col,
-  .box-fancy,
-  .box-standard,
-  .square-two-col
-   {
-    height: 100vw;
-  }
+    .box-container-2-col,
+    .box-container-1-col,
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+    .box-hero {
+        grid-column: 1;
+    }
+    .hero-section .go-shopping {
+        grid-column: 1;
+        justify-content: flex-start;
+    }
+    .hero-section .go-shopping > header {
+        height: fit-content;
+        padding: 2rem 1rem;
+    }
+    .hero-section .go-shopping footer {
+        padding: 2rem 1rem;
+    }
 
-  .drop-container {
-    display: flex;
-    flex-direction: row;
-  }
+    .hero-section .go-shopping .center-items {
+        height: calc((2.5rem * 6) + (0.6rem * 2) + 48px);
+        margin: 1.25rem;
+        padding: 0.6rem;
+    }
+    .hero-section .go-shopping .region-selector {
+        overflow-y: hidden;
+    }
 
-  .box-fancy {
-    display: flex;
-    align-items: flex-end;
-  }
+    .hero-section .go-shopping .center-items-hidden {
+        margin: 0 1.25rem;
+        padding: 0 0.6rem;
+        height: 0;
+    }
+    .hero-section .go-shopping .center-items .region-selector {
+        overflow: hidden;
+    }
+    .hero-section .go-shopping .center-items .item {
+        width: 100%;
+    }
+    .protrait-two-col,
+    .box-fancy,
+    .box-standard,
+    .square-two-col,
+    .box-hero {
+        height: 100vw;
+    }
 
-  .box-fancy .right-items {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: fit-content;
-    min-width: 100%;
-    background: transparent;
-  }
+    .drop-container {
+        display: flex;
+        flex-direction: row;
+    }
 
-  .drop
-  {
-    width: 100%;
-    height: 45vw;
-  }
+    .box-fancy {
+        display: flex;
+        align-items: flex-end;
+    }
 
-  .drop-container .box,
-  .carousel {
-    height: 50vw;
-  }
+    .box-fancy .right-items {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: fit-content;
+        min-width: 100%;
+        background: transparent;
+    }
 
-  .stretch-box {
-    display: grid;
-    margin-left: 0;
-    padding: 0;
-  }
+    .drop {
+        width: 100%;
+        height: 45vw;
+    }
 
-  .carousel {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: fit-content;
-    padding: 3.75rem 0 3.75rem 2.25rem;
-  }
+    .drop-container .box,
+    .carousel {
+        height: 50vw;
+    }
 
-  .carousel .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1rem
-  }
+    .stretch-box {
+        display: grid;
+        margin-left: 0;
+        padding: 0;
+    }
 
-  .carousel .left-items {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    min-width: 100%;
-  }
+    .carousel {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: fit-content;
+        padding: 3.75rem 0 3.75rem 2.25rem;
+    }
 
-  
-  /*                   fine-layout */
+    .carousel .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
 
-  /*                   inizio-testo */
+    .carousel .left-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        min-width: 100%;
+    }
 
-  .text {
-    font-size: 0.75rem;
-  }
+    /*                   fine-layout */
 
-  .title-medium {
-    font-size: 1.25rem;
-  }
+    /*                   inizio-testo */
 
-  .title-big {
-    font-size: 1.25rem;
-  }
+    .text {
+        font-size: 0.75rem;
+    }
 
-  .title-bigger {
-    font-size: 1.5625rem;
-  }
+    .title-medium {
+        font-size: 1.25rem;
+    }
 
-  .text .drop-h2 {
-    font-size: 1.25rem;
-  }
+    .title-big {
+        font-size: 1.25rem;
+    }
 
-  .box .drop-items .text {
-    font-size: 0.75rem;
-  }
+    .title-bigger {
+        font-size: 1.5625rem;
+    }
 
-  /*                   fine-testo */
+    .text .drop-h2 {
+        font-size: 1.25rem;
+    }
+
+    .box .drop-items .text {
+        font-size: 0.75rem;
+    }
+
+    /*                   fine-testo */
 }
