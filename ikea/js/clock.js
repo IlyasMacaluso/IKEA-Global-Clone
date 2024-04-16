@@ -11,8 +11,9 @@ function drawCircle() {
     context.stroke();
 }
 
-function drawHand(length, angle) {
+function drawHand(length, angle, color="#0058a3") {
     context.beginPath();
+    context.strokeStyle = color;
     context.moveTo(centerX, centerY);
     context.lineTo(
         centerX + length * Math.cos(angle),
