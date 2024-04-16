@@ -1,0 +1,17 @@
+@import "root.css";
+.page-title {
+    padding: 1rem 0;
+    margin-top: calc(150px - var(--nav-height));
+}
+
+.divider-container {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+    box-sizing: border-box;
+}
+.divider-container .divider {
+    width: 100vw;
+    height: 1px;
+    background-color: black;
+}

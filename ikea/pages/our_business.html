@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>IKEA Our Business</title>
+  <meta charset="UTF-8">
+  <title>IKEA Our Business</title>
 </head>
+
 <body>
-<header>
-  <div id="navigation"></div>
-  <script>
-    fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById('navigation').innerHTML = data;
-            });
-  </script>
-</header>
+  <header>
+    <div id="navigation"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navigation').innerHTML = data;
+        });
+    </script>
+  </header>
+  
 </body>
+
 </html>
