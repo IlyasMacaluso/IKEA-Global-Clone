@@ -6,18 +6,7 @@
 </head>
 <body>
 <header>
-  <div id="navigation"></div>
-  <script>
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(navbar => {
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(footer => {
-                    document.getElementById('navigation').innerHTML = navbar+footer;
-                })
-        });
-  </script>
 </header>
+<script src="js/load_page_elements.js"></script>
 </body>
 </html>
