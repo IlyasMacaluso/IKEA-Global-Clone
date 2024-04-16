@@ -139,7 +139,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: calc(100% -1rem);
+    width: calc(100% - 1rem);
     border-radius: var(--border-radius-def);
     background: #fff094;
     height: calc((2.5rem * 6) + 48px + 1rem);
@@ -181,7 +181,7 @@
     transform: translate(0, -50%);
 }
 .navbar .go-shopping .bottom-items .item,
-.navbar .go-shopping .center-items .item {
+.navbar .go-shopping .bottom-items .item {
     display: flex;
     align-items: center;
     width: 98%;
