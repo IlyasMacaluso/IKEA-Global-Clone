@@ -10,9 +10,14 @@
   <script>
     fetch('navbar.html')
         .then(response => response.text())
-        .then(data => {
-          document.getElementById('navigation').innerHTML = data;
+        .then(navbar => {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(footer => {
+                    document.getElementById('navigation').innerHTML = navbar+footer;
+                })
         });
+
   </script>
 </header>
 </body>
