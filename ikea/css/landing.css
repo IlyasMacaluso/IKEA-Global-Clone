@@ -487,6 +487,8 @@ p {
     background-color: black;
     border: none;
     z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
 .carousel .right-items .button-right {
     padding-left: 0.5rem;
@@ -501,6 +503,11 @@ p {
     height: 24px;
     width: 24px;
 }
+
+.carousel .right-items .hidden,
+.carousel .right-items .hidden{
+    opacity: 0;
+}
 .carousel .right-items .button-right:hover,
 .carousel .right-items .button-left:hover {
     background-color: #333;
@@ -513,6 +520,13 @@ p {
     width: calc(var(--box-container-max-width) * (0.175 * 3) + 50px);
     gap: var(--grid-gap);
     overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.carousel .snaps-inline {
+    scroll-snap-type: inline mandatory;
+}
+.snaps-inline > * {
+    scroll-snap-align: start;
 }
 /*  
                 può tornare utile per lo scroll con i bottoni :
