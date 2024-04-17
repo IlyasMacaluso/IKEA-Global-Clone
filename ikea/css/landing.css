@@ -68,6 +68,8 @@ p {
     max-width: 90rem;
     margin: auto;
     box-sizing: border-box;
+    margin-bottom: 9.375rem;
+
 }
 
 /* -------- inizio sezioni contenitori (contenitori di box singole o doppie) */
@@ -612,7 +614,6 @@ p {
         padding: 0 1.875rem;
         font-size: 1.5625rem;
         line-height: 120%;
-        margin: 1rem 0;
         letter-spacing: -0.03375rem;
     }
     .hero-section .go-shopping footer {
