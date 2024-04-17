@@ -188,6 +188,18 @@ p {
         margin 0.4s ease;
     overflow: hidden;
 }
+.hero-section .go-shopping .center-items .item {
+    display: flex;
+    align-items: center;
+    width: 98%;
+    border: none;
+    background: none;
+    height: 2.5rem;
+    border-radius: var(--border-radius-def);
+    font-size: 1rem;
+    font-family: inherit;
+    gap: 0.3rem;
+}
 .hero-section .go-shopping .center-items-hidden {
     margin: 0 1rem;
     padding: 0 0.7rem;
