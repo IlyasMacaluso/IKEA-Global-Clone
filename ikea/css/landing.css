@@ -69,7 +69,6 @@ p {
     margin: auto;
     box-sizing: border-box;
     margin-bottom: 9.375rem;
-
 }
 
 /* -------- inizio sezioni contenitori (contenitori di box singole o doppie) */
@@ -271,6 +270,16 @@ p {
 }
 .hero-section .go-shopping footer .left-items .selected-store {
     font-family: "Noto IKEA Latin Bold", serif;
+}
+
+/* ------ animazione icona go-shopping in hero-section */
+.hero-section .go-shopping footer .ico {
+    rotate: 0deg;
+    transition: rotate 0.4s ease;
+}
+.hero-section .go-shopping footer .spin {
+    rotate: 180deg;
+    transition: rotate 0.4s ease;
 }
 /* -------- fine hero section boxes ilyas macaluso */
 
@@ -701,7 +710,7 @@ p {
     .hero-section .go-shopping .center-items {
         height: 210%;
     }
-    .hero-section .go-shopping .center-items-hidden{
+    .hero-section .go-shopping .center-items-hidden {
         height: 0;
     }
 
