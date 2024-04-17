@@ -746,10 +746,11 @@ p {
     }
     .box-hero {
         grid-column: 1;
+        height: calc(60vw - 1rem);
     }
     .hero-section .go-shopping {
         grid-column: 2;
-        height: calc(60vw - 2rem);
+        height: calc(60vw - 1rem);
     }
 }
 
