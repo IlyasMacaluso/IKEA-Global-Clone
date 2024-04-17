@@ -694,9 +694,9 @@ p {
     }
     .hero-section {
         grid-template-columns: calc(60vw - 2rem) 1fr;
-        grid-template-rows: calc(60vw - 2rem);
-        height: fit-content;
-        max-height: fit-content;
+        grid-template-rows: 1fr;
+        min-height: 28.15rem;
+        max-height: calc(100vh - (var(--nav-height) + var(--grid-gap)));
     }
     .box-hero {
         grid-column: 1;
@@ -741,16 +741,12 @@ p {
 @media screen and (max-width: 860px) {
     .hero-section {
         grid-template-columns: calc(60vw - 2rem) 1fr;
-        grid-template-rows: 1fr;
-        height: fit-content;
     }
     .box-hero {
         grid-column: 1;
-        height: calc(60vw - 1rem);
     }
     .hero-section .go-shopping {
         grid-column: 2;
-        height: calc(60vw - 1rem);
     }
 }
 
@@ -760,7 +756,10 @@ p {
     .sections-container {
         padding: 0 1rem;
     }
-
+    .hero-section {
+        height: fit-content;
+        max-height: none;
+    }
     .box-container-2-col,
     .box-container-1-col,
     .hero-section {
