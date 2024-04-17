@@ -4,6 +4,8 @@ const footTag = document.querySelector(".body-footer")
 const headTag = document.querySelector("head")
 const bodyTag = document.querySelector("body")
 
+bodyTag.setAttribute("style", "display: none")
+
 async function loadElements() {
     try {
         const res1 = await fetch("head.html")
@@ -22,9 +24,9 @@ async function loadElements() {
         headTag.innerHTML += headData
 
         // Carica gli script dopo che tutti gli altri elementi sono stati inseriti nel DOM
-        await loadScripts();
+        await loadScripts()
     } catch (error) {
-        console.log(error.message);
+        console.log(error.message)
     }
 }
 
@@ -39,8 +41,7 @@ function loadScripts() {
         fetchScript("js/toggle-hero-go-shopping"),
         fetchScript("js/carousel-buttons.js"),
         fetchScript("js/clock.js"),
-        fetchScript("js/sliding-boxes.js")
-
+        fetchScript("js/sliding-boxes.js"),
     ])
 }
 
@@ -48,13 +49,17 @@ function loadScripts() {
 function fetchScript(url) {
     return new Promise((resolve, reject) => {
         const script = document.createElement("script")
-        script.src = url;
-        script.onload = resolve;
-        script.onerror = reject;
-        document.body.appendChild(script); // Aggiungi lo script al body
-    });
+        script.src = url
+        script.onload = resolve
+        script.onerror = reject
+        document.body.appendChild(script) // Aggiungi lo script al body
+    })
 }
 
 window.addEventListener("load", () => {
     loadElements()
+    // per caricare la pagina dopo che i cambiamenti sono stati applicati
+    setTimeout(() => {
+        bodyTag.setAttribute("style", "opacity: 1")
+    }, 100)
 })

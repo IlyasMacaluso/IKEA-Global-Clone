@@ -18,9 +18,9 @@ setTimeout(() => {
         if (currentScrollPosition >= 240 && currentScrollPosition > lastScrollPosition) {
             navBar.classList.add("navbar-hidden")
             goShpButton.classList.add("go-shopping-visible")
-        } else if (currentScrollPosition >= 280 && currentScrollPosition < lastScrollPosition) {
+        } else if (currentScrollPosition >= 240 && currentScrollPosition < lastScrollPosition) {
             navBar.classList.remove("navbar-hidden")
-        } else if (currentScrollPosition <= 280 && currentScrollPosition < lastScrollPosition) {
+        } else if (currentScrollPosition <= 240 && currentScrollPosition < lastScrollPosition) {
             goShpButton.classList.remove("go-shopping-visible")
             navBar.classList.remove("navbar-hidden")
         }

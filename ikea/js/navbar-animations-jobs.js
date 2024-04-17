@@ -19,7 +19,7 @@ setTimeout(() => {
         let currentScrollPosition = window.scrollY
         if (currentScrollPosition >= 240 && currentScrollPosition > lastScrollPosition) {
             navBar.classList.add("navbar-hidden")
-        } else if (currentScrollPosition >= 280 && currentScrollPosition < lastScrollPosition) {
+        } else if (currentScrollPosition >= 240 && currentScrollPosition < lastScrollPosition) {
             navBar.classList.remove("navbar-hidden")
         }
         lastScrollPosition = currentScrollPosition
