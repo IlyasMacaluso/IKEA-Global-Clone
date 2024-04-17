@@ -698,6 +698,12 @@ p {
     .hero-section .go-shopping > header {
         padding: 0 1.25rem;
     }
+    .hero-section .go-shopping .center-items {
+        height: 210%;
+    }
+    .hero-section .go-shopping .center-items-hidden{
+        height: 0;
+    }
 
     /* -------- rimozione animazioni freccetta */
     .box .bottom-items {
@@ -734,6 +740,7 @@ p {
     }
     .hero-section .go-shopping {
         grid-column: 2;
+        height: calc(60vw - 2rem);
     }
 }
 
@@ -755,6 +762,7 @@ p {
     .hero-section .go-shopping {
         grid-column: 1;
         justify-content: flex-start;
+        height: fit-content;
     }
     .hero-section .go-shopping > header {
         height: fit-content;
