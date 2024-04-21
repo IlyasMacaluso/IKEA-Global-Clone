@@ -9,6 +9,16 @@
         "GRAD" 0,
         "opsz" 24;
 }
+.material-symbols-rounded {
+    line-height: 110%;
+    font-size: 24px;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
 img,
 svg {
     display: block;
@@ -84,6 +94,7 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: var(--grid-gap);
     margin-bottom: var(--grid-gap);
+    text-decoration: none;
 }
 .hero-section {
     box-sizing: border-box;
@@ -137,6 +148,7 @@ p {
     height: 2.5rem;
     min-width: 2.5rem;
     background-color: #000;
+    color: white;
     border-radius: 2.5rem;
     box-sizing: border-box;
     border: none;
@@ -274,12 +286,12 @@ p {
 
 /* ------ animazione icona go-shopping in hero-section */
 .hero-section .go-shopping footer .ico {
-    rotate: 0deg;
-    transition: rotate 0.4s ease;
+    transform: rotate(0deg);
+    transition: transform 0.4s ease;
 }
 .hero-section .go-shopping footer .spin {
-    rotate: 180deg;
-    transition: rotate 0.4s ease;
+    transform: rotate(180deg);
+    transition: transform 0.4s ease;
 }
 /* -------- fine hero section boxes ilyas macaluso */
 
@@ -319,18 +331,15 @@ p {
 /* -------- fine struttura box semplici*/
 
 /* -------- inizio box "drop" Andrea Audisio */
-.box .drop-items {
+.drop-container .drop-items {
     display: flex;
-    align-self: flex-end;
-    margin-bottom: 15%;
-    align-items: flex-end;
-    height: 60%;
+    align-items: center;
+    height: 100%;
     width: 100%;
     padding: 1.5rem 12% 1.5rem 0;
     color: white;
     transition: 500ms transform ease;
-    /* transform: translateX(-64px);
-    overflow:visible; */
+    box-sizing: border-box;
 }
 
 .text .drop-h2 {
@@ -361,11 +370,11 @@ p {
         opacity 200ms;
     opacity: 100%;
 }
-
-/* -------- inizio box-fancy ilyas macaluso */
 .drop-container {
     padding: 1.5rem;
 }
+/* -------- inizio box-fancy ilyas macaluso */
+
 .box-fancy {
     display: flex;
     align-items: center;
@@ -382,6 +391,7 @@ p {
     left: 3.75rem;
     transition: 500ms transform ease;
     transform: translateX(-64px);
+    z-index: 3;
 }
 .box-fancy .right-items {
     width: 70%;
@@ -409,7 +419,6 @@ p {
 .box .bottom-items {
     display: flex;
     align-items: flex-start;
-    height: fit-content;
     width: 100%;
     padding: 1.5rem 12% 1.5rem 1.5rem;
     color: white;
@@ -465,6 +474,12 @@ p {
     padding: 3.75rem 5.75rem 3.75rem 3.75rem;
     border-radius: var(--border-radius-def);
 }
+.light-blue {
+    background-color: #eaedf1;
+}
+.bright-green {
+    background-color: #a1c26a;
+}
 .carousel .content {
     display: flex;
     align-items: center;
@@ -495,24 +510,19 @@ p {
     top: 38%;
     border-radius: 3.5rem;
     background-color: black;
+    color: white;
     border: none;
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
 .carousel .right-items .button-right {
-    padding-left: 0.5rem;
     right: calc(3.5rem / 2 * -1);
 }
 .carousel .right-items .button-left {
-    padding-right: 0.5rem;
     left: calc(3.5rem / 2 * -1);
 }
-.carousel .right-items .button-right img,
-.carousel .right-items .button-left img {
-    height: 24px;
-    width: 24px;
-}
+
 
 .carousel .right-items .hidden,
 .carousel .right-items .hidden {
@@ -560,6 +570,8 @@ p {
     border-radius: var(--border-radius-def);
     background-color: var(--color-background);
     overflow: hidden;
+    color: inherit;
+    text-decoration: none;
 }
 .carousel .card img,
 video {
@@ -570,7 +582,6 @@ video {
 .carousel .card .bottom-items {
     display: flex;
     flex-direction: column;
-    height: fit-content;
     padding: 16px 8px 16px 16px;
 }
 .carousel .card .bottom-items h3,
@@ -716,7 +727,7 @@ p {
 
     /* -------- rimozione animazioni freccetta */
     .box .bottom-items {
-        padding: 1rem;
+        padding: 1rem 5.5rem 1rem 1rem;
         transition: none;
         transform: translateX(0);
     }
@@ -808,12 +819,6 @@ p {
     .box-hero {
         height: 100vw;
     }
-
-    .drop-container {
-        display: flex;
-        flex-direction: row;
-    }
-
     .box-fancy {
         display: flex;
         align-items: flex-end;
