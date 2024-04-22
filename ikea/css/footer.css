@@ -48,9 +48,10 @@
   bottom: 0;
   left: 0;
   right: 0;
-}
-.lights-off {
   visibility: hidden;
+}
+.body-footer .lights-on {
+  visibility: visible;
 }
 .body-footer .switch-box {
   position: absolute;
@@ -160,9 +161,28 @@
   text-decoration: none;
   color: white;
 }
-@media screen and (max-width: 93.75rem) {
+
+@media screen and (max-width: 768px) {
   .body-footer {
     width: 100vw;
+  }
+
+  .body-footer .room-box {
+    position: relative;
+    display: flex;
+    width: 115rem;
+  }
+
+  .body-footer .switch-box .switch-1 {
+    position: absolute;
+    bottom: 28%;
+    left: 42%;
+    width: 2%;
+  }
+
+  .body-footer .switch-box .switch-2,
+  .body-footer .switch-box .switch-3 {
+    display: none;
   }
 
   .body-footer .bottom-box .links {
@@ -178,6 +198,7 @@
     font-weight: 400;
     letter-spacing: 0;
     padding: 0.25rem 0.75rem;
+    margin: 0;
   }
 
   .body-footer .bottom-box .info {
