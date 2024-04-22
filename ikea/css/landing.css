@@ -787,6 +787,7 @@ p {
         justify-self: center;
         width: calc(100% + 2rem);
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     .box-fancy .right-items {
@@ -800,6 +801,7 @@ p {
     }
     .box-fancy .right-items video {
         height: 50vw;
+        min-width: none;
     }
     .box-fancy .left-items {
         position: unset;
@@ -811,6 +813,7 @@ p {
         width: calc(100% + 2rem);
         justify-self: center;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     .carousel .content {

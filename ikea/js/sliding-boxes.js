@@ -7,10 +7,11 @@ const carousels = document.querySelectorAll(".carousel")
 function slideAnimation(node) {
     node.forEach((element) => {
         const rectY = element.getBoundingClientRect().top
-        if (rectY < window.innerHeight * 1.4) {
-            element.style.animationPlayState = "running"
-        } else {
-            element.style.animationPlayState = "paused"
+        if (rectY < window.innerHeight * 2) {
+            element.classList.add("box-animation-paused")
+            if (rectY < window.innerHeight * 1.4) {
+                element.classList.add("box-animation-start")
+            }
         }
     })
 }
@@ -18,17 +19,10 @@ function slideAnimation(node) {
 /* resize del riquadro go-shopping della hero section (mobile) */
 function goShoppingTransition() {
     const rectY = heroGoShopping.getBoundingClientRect().top
-    if (rectY < window.innerHeight * .8) {
+    if (rectY < window.innerHeight * 0.8) {
         heroGoShopping.classList.add("header-transition")
     }
 }
-
-//animazione al caricamento della pagina
-window.addEventListener("load", () => {
-    slideAnimation(boxes)
-    slideAnimation(boxesFancy)
-    slideAnimation(carousels)
-})
 
 //animazioni allo scroll
 document.addEventListener("scroll", () => {
