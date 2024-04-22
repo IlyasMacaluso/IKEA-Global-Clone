@@ -11,7 +11,8 @@
     }
 }
 
-.box,
+.box-container-1-col .box,
+.box-container-2-col .box,
 .box-fancy,
 .carousel {
     animation-name: slideUp;
