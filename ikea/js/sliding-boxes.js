@@ -7,7 +7,7 @@ const carousels = document.querySelectorAll(".carousel")
 function slideAnimation(node) {
     node.forEach((element) => {
         const rectY = element.getBoundingClientRect().top
-        if (rectY < window.innerHeight * 1.2) {
+        if (rectY < window.innerHeight * 1.5) {
             element.style.visibility = "visible"
             element.style.animationPlayState = "running"
         } else {
@@ -20,7 +20,7 @@ function slideAnimation(node) {
 /* resize del riquadro go-shopping della hero section (mobile) */
 function goShoppingTransition() {
     const rectY = heroGoShopping.getBoundingClientRect().top
-    if (rectY < window.innerHeight * 1.2) {
+    if (rectY < window.innerHeight * .8) {
         heroGoShopping.classList.add("header-transition")
     }
 }
