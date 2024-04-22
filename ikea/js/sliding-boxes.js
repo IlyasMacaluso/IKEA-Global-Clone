@@ -7,11 +7,9 @@ const carousels = document.querySelectorAll(".carousel")
 function slideAnimation(node) {
     node.forEach((element) => {
         const rectY = element.getBoundingClientRect().top
-        if (rectY < window.innerHeight * 1.5) {
-            element.style.visibility = "visible"
+        if (rectY < window.innerHeight * 1.4) {
             element.style.animationPlayState = "running"
         } else {
-            element.style.visibility = "hidden"
             element.style.animationPlayState = "paused"
         }
     })
