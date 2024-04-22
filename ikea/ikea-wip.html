@@ -21,23 +21,26 @@
     <meta name="twitter:site" content="@IKEA">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/landing.css" />
     <link rel="stylesheet" href="css/nav-and-mobile-nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/sliding-boxes.css">
+    <link rel="stylesheet" href="css/video-buttons.css">
 </head>
 
 <body>
     <div class="overlay-all"></div>
-    
+
     <!-- navbar e mobile navbar-->
     <header>
         <!-- inizio navbar (gruppo) -->
         <nav class="navbar">
             <!-- contenitore links -->
             <section class="links-container">
-                <a class="logo" href="#self">
+                <a class="logo" href="./ikea-wip.html">
                     <svg width="90" height="36" viewBox="0 0 90 36" fill="none" xmlns="http://www.w3.org/2000/svg"
                         role="img" aria-label="IKEA logo">
                         <path d="M0 0V36H90V0H0Z" fill="#0058A3"></path>
@@ -50,7 +53,7 @@
                     </svg>
                 </a>
                 <a class="link" href="#self">Stories</a>
-                <a class="link" href="#self">Jobs</a>
+                <a class="link" href="./jobs.html">Jobs</a>
                 <a class="link" href="#self">Newsroom</a>
                 <a class="link" href="#self">Our business</a>
             </section>
@@ -68,7 +71,7 @@
                         </section>
                         <section class="right-items">
                             <button class="ico-btn">
-                                <span class="material-symbols-outlined ico" style="color: white;">
+                                <span class="material-symbols-outlined ico">
                                     arrow_forward
                                 </span>
                             </button>
@@ -119,7 +122,7 @@
                     <header>
                         <h2>Go shopping</h2>
                         <button class="ico-btn">
-                            <span class="material-symbols-outlined ico" style="color: white;">
+                            <span class="material-symbols-outlined ico">
                                 arrow_forward
                             </span>
                         </button>
@@ -164,7 +167,7 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a class="link" href="#self">
+                    <a class="link" href="./jobs.html">
                         <h2>Jobs</h2>
                         <span class="material-symbols-outlined ico">
                             arrow_forward
@@ -198,8 +201,7 @@
             <!-- box 1 -->
             <a href="#self" class="box box-hero left-box">
                 <img alt="An assortment of brightly coloured home products from the TESAMMANS collection such as lamps, glasses, clock and more."
-                    loading="eager" width="2000" height="2000"
-                    src="https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg" srcset="https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg?f=g 2000w, 
+                    loading="eager" src="https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg" srcset="https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg?f=g 2000w, 
                     https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg?f=sg 1600w, 
                     https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg?f=xxxl 1400w, 
                     https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg?f=xxl 1100w,
@@ -212,7 +214,7 @@
                     https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg?f=xxxs 300w, 
                     https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg?f=u 160w, 
                     https://www.ikea.com/global/en/images/PH_197398_1x1_1_f769fe5a47.jpg?f=xu 80w"
-                    sizes="(min-width: 768px) 920px, 94vw" class="bg-main" style="object-position: 50% 10%;">
+                    sizes="(min-width: 768px) 920px, 94vw" class="bg-main">
                 <div class="bg-overlay">
                     <div class="bottom-items items-light">
                         <span class="material-symbols-outlined ico">
@@ -231,7 +233,7 @@
                 <header>
                     <h2>Go shopping</h2>
                     <button class="ico-btn">
-                        <span class="material-symbols-outlined ico" style="color: white;">
+                        <span class="material-symbols-outlined ico">
                             arrow_forward
                         </span> </button>
                 </header>
@@ -267,7 +269,8 @@
         <!-- fine sezione iniziale ilyas macaluso-->
 
         <!-- inizio sezione 2 ilyas macaluso, prima "box-fancy" -->
-        <section class="box-container-1-col mobile-box">
+        <section class="box-container-1-col">
+
             <a href="#self" class="box-fancy black-bg">
                 <div class="left-items items-light">
                     <span class="material-symbols-outlined ico">
@@ -279,6 +282,11 @@
                     </div>
                 </div>
                 <div class="right-items">
+
+                    <span class="video-btn material-symbols-outlined">
+                        pause
+                    </span>
+
                     <video autoplay muted loop>
                         <source
                             src="./assets/media/backgrounds/video/Startpage_sustainability_highlights_acdffb460d.mp4" />
@@ -288,51 +296,6 @@
         </section>
 
         <!-- fine sezione 2-->
-
-        <!-- inizio sezione 16 (box goccia) Andrea Audisio-->
-        <section class="box-container-1-col mobile-box">
-            <!-- box 1 -->
-            <a href="#self" class="box-container-2-col drop-container" style="text-decoration: none;">
-                <div class="box protrait-two-col drop">
-                    <img class="bg-main " alt="A yellow, white and orange floral pattern." loading="lazy" width="1500"
-                        height="2000"
-                        src="https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg"
-                        srcset="
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=g 2000w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=sg 1600w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=xxxl 1400w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=xxl 1100w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=xl 900w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=l 750w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=m 700w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=s 600w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=xs 500w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=xxs 400w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=xxxs 300w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=u 160w, 
-                            https://www.ikea.com/global/en/images/nytillverkad_compressed_startpage_2b0dacbf62.jpg?f=xu 80w"
-                        sizes="(min-width: 1440px) 1440px, 95vw" />
-
-                </div>
-
-
-                <!-- box 2 ---->
-                <div class="box square-two-col">
-
-                    <div class="bottom-items drop-items items-dark">
-                        <span class="material-symbols-outlined ico">
-                            arrow_forward
-                        </span>
-                        <div class="text">
-                            <p>Check out the latest Nytillverkad collection drop</p>
-                            <h2 class="drop-h2">A blast from the past</h2>
-                        </div>
-                    </div>
-
-                </div>
-            </a>
-        </section>
-        <!-- fine sezione 16 Andrea Audisio-->
 
         <!-- inizio sezione 3 ilays macaluso -->
         <section class="box-container-2-col mobile-box">
@@ -513,6 +476,9 @@
 
         <section class="box-container-2-col mobile-box">
             <a href="#self" class="box protrait-two-col">
+                <span class="video-btn material-symbols-outlined btn-dark">
+                    pause
+                </span>
                 <video autoplay muted loop class="bg-main">
                     <source src="assets/media/backgrounds/video/1984_blue_4069d62174.mp4" type="video/mp4"
                         alt="A video showing one of the earlier IKEA bedroom design" />
@@ -616,7 +582,7 @@
 
         <!-- inizio sezione 8 "carosello" ilyas macaluso -->
         <section class="box-container-1-col">
-            <div class="carousel" style="background-color: #a1c26a">
+            <div class="carousel bright-green">
                 <div class="content">
                     <div class="left-items">
                         <h2 class="title-medium">Add a little extra to your everyday</h2>
@@ -629,15 +595,18 @@
 
                     <div class="right-items">
                         <!-- bottoni per scorrere il contenuto -->
-                        <button class="button-left hidden">
-                            <img src="./assets/media/icons/arrow_back_ios_new.svg" alt="" />
-                        </button>
-                        <button class="button-right">
-                            <img src="./assets/media/icons/arrow_forward_ios.svg" alt="" />
-                        </button>
+
+                        <span class="button-left hidden material-symbols-rounded">
+                            arrow_back_ios_new
+                        </span>
+
+                        <span class="button-right material-symbols-rounded">
+                            arrow_forward_ios
+                        </span>
 
                         <div class="gallery snaps-inline">
-                            <a class="card">
+                            <a href="#self" class="card">
+
                                 <img src="assets/media/backgrounds/carousel-cards-backgrounds/carousel1-1.avif"
                                     alt="A man wearing a dressing gown preparing breakfast" />
                                 <section class="bottom-items">
@@ -645,17 +614,24 @@
                                     <h3>Enjoy easy overnight oats</h3>
                                 </section>
                             </a>
-                            <a class="card">
-                                <video autoplay loop muted>
-                                    <source src="assets/media/backgrounds/carousel-cards-backgrounds/carousel1-2.mp4"
-                                        type="video/mp4" alt="A woman diving and swimming in a lake" />
-                                </video>
+                            <a href="#self" class="card">
+                                <div class="video-container">
+                                    <span class="video-btn material-symbols-outlined">
+                                        pause
+                                    </span>
+                                    <video autoplay loop muted>
+                                        <source
+                                            src="assets/media/backgrounds/carousel-cards-backgrounds/carousel1-2.mp4"
+                                            type="video/mp4" alt="A woman diving and swimming in a lake" />
+                                    </video>
+                                </div>
+
                                 <section class="bottom-items">
                                     <p>A wild swim workout</p>
                                     <h3>Spend some time in nature</h3>
                                 </section>
                             </a>
-                            <a class="card">
+                            <a href="#self" class="card">
                                 <img src="./assets/media/backgrounds/carousel-cards-backgrounds/carousel1-3.avif"
                                     alt="A man carrying a glass flower vase" />
                                 <section class="bottom-items">
@@ -663,7 +639,7 @@
                                     <h3>Bring some blooms home</h3>
                                 </section>
                             </a>
-                            <a class="card" id="card4">
+                            <a href="#self" class="card" id="card4">
                                 <img src="./assets/media/backgrounds/carousel-cards-backgrounds/carousel1-4.avif"
                                     alt="A kid and their grandparents setting up music on a phone to dance" />
                                 <section class="bottom-items">
@@ -681,7 +657,7 @@
         <!-- inizio sezione 8 ilyas macaluso, seconda "box-fancy" (iniziata da FS) -->
 
         <section class="box-container-1-col">
-            <a href="#self" class="box-fancy military-green mobile-stretch-box-1">
+            <a href="#self" class="box-fancy military-green">
                 <div class="left-items items-light">
                     <span class="material-symbols-outlined ico">
                         arrow_forward
@@ -755,6 +731,9 @@
         <!-- inizio sezione 10 ilyas macaluso -->
         <section class="box-container-2-col mobile-box">
             <a href="#self" class="box protrait-two-col">
+                <span class="video-btn material-symbols-outlined btn-dark">
+                    pause
+                </span>
                 <video autoplay muted loop class="bg-main">
                     <source src="./assets/media/backgrounds/video/yearbookstartpagefinal_4d3a80f8c6.mp4"
                         type="video/mp4" alt="A video showing one of the earlier IKEA bedroom design" />
@@ -913,6 +892,9 @@
             </a>
 
             <a href="#self" class="box protrait-two-col">
+                <span class="video-btn material-symbols-outlined">
+                    pause
+                </span>
                 <video class="bg-main" autoplay loop muted>
                     <source
                         src="./assets/media/backgrounds/video/IKEA_social_responsibility_intro_startpage_def4dd9e94.mp4"
@@ -974,6 +956,9 @@
             </a>
 
             <a href="#self" class="box square-two-col">
+                <span class="video-btn material-symbols-outlined btn-dark">
+                    pause
+                </span>
                 <video class="bg-main" autoplay loop muted>
                     <source src="./assets/media/backgrounds/video/klippan_startpage_73889e3fa5.mp4" type="video/mp4"
                         alt="A video showing a series of sofa in their different colorations and patterns" />
@@ -995,7 +980,7 @@
         <!-- fine sezione 15 alessandro canonico (video) -->
 
         <!-- inizio sezione 16 ilyas macaluso, terza "box-fancy" -->
-        <section class="box-container-1-col mobile-stretch-box-2">
+        <section class="box-container-1-col">
             <a href="#self" class="box-fancy black-bg ">
                 <div class="left-items items-light">
                     <span class="material-symbols-outlined ico">
@@ -1007,6 +992,9 @@
                     </div>
                 </div>
                 <div class="right-items">
+                    <span class="video-btn material-symbols-outlined btn-dark">
+                        pause
+                    </span>
                     <video autoplay muted loop>
                         <source src="./assets/media/backgrounds/video/Foundation_week_startpage_6d342b057a.mp4" />
                     </video>
@@ -1134,7 +1122,7 @@
 
         <!-- inizio sezione 22 secondo carosello ilyas macaluso -->
         <section class="box-container-1-col">
-            <div class="carousel" style="background-color: #eaedf1">
+            <div class="carousel light-blue">
                 <div class="content">
                     <div class="left-items">
                         <h2 class="title-big">The stories behind the products</h2>
@@ -1143,16 +1131,17 @@
 
                     <div class="right-items">
                         <!-- bottoni per scorrere il contenuto -->
-                        <button class="button-left hidden">
-                            <img src="./assets/media/icons/arrow_back_ios_new.svg" alt="" />
-                        </button>
 
-                        <button class="button-right">
-                            <img src="./assets/media/icons/arrow_forward_ios.svg" alt="" />
-                        </button>
+                        <span class="button-left hidden material-symbols-rounded">
+                            arrow_back_ios_new
+                        </span>
+
+                        <span class="button-right material-symbols-rounded">
+                            arrow_forward_ios
+                        </span>
 
                         <div class="gallery snaps-inline">
-                            <a class="card">
+                            <a href="#self" class="card">
                                 <img src="./assets/media/backgrounds/carousel-cards-backgrounds/carousel2-img1.avif"
                                     alt="A minimalistic rounder cilindric lamp" />
                                 <section class="bottom-items bottom-items-spacious">
@@ -1160,7 +1149,7 @@
                                     <h3>SYMFONISK lamp</h3>
                                 </section>
                             </a>
-                            <a class="card">
+                            <a href="#self" class="card">
                                 <img src="./assets/media/backgrounds/carousel-cards-backgrounds/carousel2-img2.avif"
                                     alt="A small peas colored rounded portable table" />
                                 <section class="bottom-items bottom-items-spacious">
@@ -1168,7 +1157,7 @@
                                     <h3>BURVIK table</h3>
                                 </section>
                             </a>
-                            <a class="card">
+                            <a href="#self" class="card">
                                 <img src="./assets/media/backgrounds/carousel-cards-backgrounds/carousel2-img3.avif"
                                     alt="A colorful striped fabric" />
                                 <section class="bottom-items bottom-items-spacious">
@@ -1176,7 +1165,7 @@
                                     <h3>BRÖNDEN rug</h3>
                                 </section>
                             </a>
-                            <a class="card">
+                            <a href="#self" class="card">
                                 <img src="./assets/media/backgrounds/carousel-cards-backgrounds/carousel2-img4.avif"
                                     alt="A classic peas colored wooden chair" />
                                 <section class="bottom-items bottom-items-spacious">
@@ -1184,7 +1173,7 @@
                                     <h3>RÖNNINGE chair</h3>
                                 </section>
                             </a>
-                            <a class="card">
+                            <a href="#self" class="card">
                                 <img src="./assets/media/backgrounds/carousel-cards-backgrounds/carousel2-img5.avif"
                                     alt="A red rounded wooden chair" />
                                 <section class="bottom-items bottom-items-spacious">
@@ -1240,7 +1229,7 @@
                 <img class="bg-main animated-bg" src="assets/media/backgrounds/image/DSCF_8677_02a7e91765.avif" alt="" />
                 <div class="bg-overlay">
                     <div class="bottom-items items-light">
-                        <span class="material-symbols-outlined ico" style="color: white;">
+                        <span class="material-symbols-outlined ico">
                             arrow_forward
                         </span>
                         <div class="text">
@@ -1333,6 +1322,7 @@
     <script src="js/navbar-animations.js"></script>
     <script src="js/sliding-boxes.js"></script>
     <script src="js/carousel-buttons.js"></script>
+    <script src="js/video-buttons.js"></script>
 </body>
 
 </html>

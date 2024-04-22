@@ -90,9 +90,10 @@
 }
 
 /* -------- iconcina che ruota */
-.navbar .go-shopping .spin {
-    rotate: 180deg;
-    transition: rotate 0.4s ease;
+.navbar .go-shopping .left-items .spin {
+
+    transform: rotate(180deg);
+    transition: transform 0.4s ease;
 }
 /* ------- */
 
@@ -105,8 +106,9 @@
         "wght" 300,
         "GRAD" 1,
         "opsz" 24;
-    rotate: 0;
-    transition: rotate 0.4s ease;
+
+    transform: rotate(0deg);
+    transition: transform 0.4s ease;
 }
 .navbar .go-shopping .left-items p {
     min-width: max-content;
@@ -131,6 +133,7 @@
     height: 2rem;
     width: 2rem;
     background-color: #000;
+    color: white;
     border-radius: 2rem;
     border: none;
 }
@@ -307,7 +310,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     height: 100%;
     z-index: -11;
 }
@@ -344,6 +347,7 @@
     height: 2.5rem;
     width: 2.5rem;
     background-color: #000;
+    color: white;
     border-radius: 2.5rem;
     box-sizing: border-box;
     border: none;
@@ -444,12 +448,12 @@
 
 /* ------- iconcina che ruota */
 .mobile-nav .go-shopping footer .ico {
-    rotate: 0deg;
-    transition: rotate 0.4s ease;
+    transform: rotate(0deg);
+    transition: transform 0.4s ease;
 }
 .mobile-nav .go-shopping footer .spin {
-    rotate: 180deg;
-    transition: rotate 0.4s ease;
+    transform: rotate(180deg);
+    transition: transform 0.4s ease;
 }
 /* ------- */
 
