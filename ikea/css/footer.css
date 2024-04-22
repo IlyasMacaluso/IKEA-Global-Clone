@@ -154,7 +154,7 @@
 }
 @media screen and (max-width: 93.75rem) {
   .body-footer {
-    width: 100vw;
+    width: 100%;
   }
 
   .body-footer .bottom-box .links {
@@ -185,7 +185,7 @@
   }
 
   .body-footer .bottom-box .info .center {
-    order: 2;
+    border-radius: 2;
   }
 }
 

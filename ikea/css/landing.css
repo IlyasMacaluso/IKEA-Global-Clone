@@ -86,7 +86,8 @@ p {
     box-sizing: border-box;
     margin-bottom: var(--grid-gap);
     gap: var(--grid-gap);
-    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 .box-container-2-col {
     box-sizing: border-box;
@@ -523,7 +524,6 @@ p {
     left: calc(3.5rem / 2 * -1);
 }
 
-
 .carousel .right-items .hidden,
 .carousel .right-items .hidden {
     opacity: 0;
@@ -753,14 +753,13 @@ p {
     .hero-section {
         grid-template-columns: calc(60vw - 2rem) 1fr;
         grid-template-rows: 1fr;
-        height: fit-content;
+        height: var(--protrait-two-col);
     }
     .box-hero {
         grid-column: 1;
     }
     .hero-section .go-shopping {
         grid-column: 2;
-        height: calc(60vw - 2rem);
     }
 }
 
@@ -769,6 +768,7 @@ p {
     /*                   inizio-layout */
     .sections-container {
         padding: 0 1rem;
+        align-items: center;
     }
 
     .box-container-2-col,
@@ -779,26 +779,32 @@ p {
     .box-hero {
         grid-column: 1;
     }
+    .hero-section {
+        height: fit-content;
+    }
     .hero-section .go-shopping {
         grid-column: 1;
         justify-content: flex-start;
         height: fit-content;
+        max-height: 28rem;
     }
     .hero-section .go-shopping > header {
-        height: fit-content;
+        height: 6.25rem;
         padding: 2rem 1rem;
+        transition: height 1s ease-out;
+    }
+    .hero-section .go-shopping .header-transition {
+        height: 22rem;
+        transition: height 1s ease-out;
     }
     .hero-section .go-shopping footer {
-        padding: 2rem 1rem;
+        padding: 0 1rem;
     }
 
     .hero-section .go-shopping .center-items {
-        height: calc((2.5rem * 6) + (0.6rem * 2) + 48px);
+        height: calc(((2.5rem * 6) + (0.6rem * 2) + 48px) * 4);
         margin: 1.25rem;
         padding: 0.6rem;
-    }
-    .hero-section .go-shopping .region-selector {
-        overflow-y: hidden;
     }
 
     .hero-section .go-shopping .center-items-hidden {
@@ -806,9 +812,7 @@ p {
         padding: 0 0.6rem;
         height: 0;
     }
-    .hero-section .go-shopping .center-items .region-selector {
-        overflow: hidden;
-    }
+
     .hero-section .go-shopping .center-items .item {
         width: 100%;
     }
@@ -838,30 +842,24 @@ p {
         height: 45vw;
     }
 
-    .drop-container .box,
-    .carousel {
+    .drop-container .box {
         height: 50vw;
     }
 
-    .stretch-box {
-        display: grid;
-        margin-left: 0;
-        padding: 0;
-    }
-
     .carousel {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
         height: fit-content;
         padding: 3.75rem 0 3.75rem 2.25rem;
+        border-radius: 0;
+        width: 100%;
+        justify-self: center;
     }
 
     .carousel .content {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        align-items: flex-start;
         gap: 1rem;
+        overflow: hidden;
     }
 
     .carousel .left-items {
@@ -870,7 +868,33 @@ p {
         gap: 0.625rem;
         min-width: 100%;
     }
+    .carousel .right-items {
+        width: 100%;
+    }
+    .carousel .right-items-wrapper {
+        position: relative;
+    }
 
+    .carousel .gallery {
+        grid-auto-columns: 15.8125rem;
+        width: 100%;
+    }
+    .carousel .gallery .card > img,
+    .carousel .gallery .card video {
+        height: 15.8125rem;
+    }
+    .carousel .right-items .button-right,
+    .carousel .right-items .button-left {
+        height: 2.5rem;
+        width: 2.5rem;
+        z-index: 11;
+    }
+    .carousel .right-items .button-right {
+        right: 1rem;
+    }
+    .carousel .right-items .button-left {
+        left: 1rem;
+    }
     /*                   fine-layout */
 
     /*                   inizio-testo */

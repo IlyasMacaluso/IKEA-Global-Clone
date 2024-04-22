@@ -1,5 +1,5 @@
 const boxes = document.querySelectorAll(".box")
-const boxesHero = document.querySelectorAll(".box-hero")
+const heroGoShopping = document.querySelector(".hero-section .go-shopping header")
 const boxesFancy = document.querySelectorAll(".box-fancy")
 const carousels = document.querySelectorAll(".carousel")
 
@@ -17,6 +17,14 @@ function slideAnimation(node) {
     })
 }
 
+/* resize del riquadro go-shopping della hero section (mobile) */
+function goShoppingTransition() {
+    const rectY = heroGoShopping.getBoundingClientRect().top
+    if (rectY < window.innerHeight * 1.2) {
+        heroGoShopping.classList.add("header-transition")
+    }
+}
+
 //animazione al caricamento della pagina
 window.addEventListener("load", () => {
     slideAnimation(boxes)
@@ -29,6 +37,7 @@ document.addEventListener("scroll", () => {
     slideAnimation(boxes)
     slideAnimation(boxesFancy)
     slideAnimation(carousels)
+    goShoppingTransition()
 })
 
 window.addEventListener("resize", () => {
