@@ -749,7 +749,7 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .hero-section {
+  .sections-container .hero-section {
     display: flex;
     flex-direction: column;
   }
@@ -757,8 +757,8 @@ p {
   .protrait-two-col,
   .box-fancy,
   .box-standard,
-  .square-two-col,
-  .left-box {
+  .square-two-col
+   {
     height: 100vw;
   }
 
@@ -791,7 +791,7 @@ p {
 
   .carousel,
   .drop,
-  .hero-section .go-shopping {
+  .mobile-box .go-shopping {
     height: 60vw;
   }
 
