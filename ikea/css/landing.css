@@ -1,6 +1,5 @@
 @import "root.css";
 
-
 .material-symbols-outlined {
     line-height: 110%;
     font-size: 24px;
@@ -21,7 +20,7 @@ body {
     overflow-x: hidden;
 }
 h2 {
-    font-family: "Noto IKEA Latin Bold";
+    font-family: "Noto IKEA Latin Bold", serif;
     margin: 0;
     padding: 0;
 }
@@ -69,6 +68,7 @@ p {
     max-width: 90rem;
     margin: auto;
     box-sizing: border-box;
+    margin-bottom: 9.375rem;
 }
 
 /* -------- inizio sezioni contenitori (contenitori di box singole o doppie) */
@@ -187,6 +187,18 @@ p {
         margin 0.4s ease;
     overflow: hidden;
 }
+.hero-section .go-shopping .center-items .item {
+    display: flex;
+    align-items: center;
+    width: 98%;
+    border: none;
+    background: none;
+    height: 2.5rem;
+    border-radius: var(--border-radius-def);
+    font-size: 1rem;
+    font-family: inherit;
+    gap: 0.3rem;
+}
 .hero-section .go-shopping .center-items-hidden {
     margin: 0 1rem;
     padding: 0 0.7rem;
@@ -212,18 +224,6 @@ p {
     bottom: 25%;
     height: 1.25rem;
     width: 1.25rem;
-}
-.hero-section .go-shopping .center-items .item {
-    display: flex;
-    align-items: center;
-    width: 98%;
-    border: none;
-    background: none;
-    height: 2.5rem;
-    border-radius: var(--border-radius-def);
-    font-size: 1rem;
-    font-family: inherit;
-    gap: 0.3rem;
 }
 .hero-section .go-shopping .center-items .item span {
     font-size: 0.9rem;
@@ -269,7 +269,17 @@ p {
     align-items: center;
 }
 .hero-section .go-shopping footer .left-items .selected-store {
-    font-family: "Noto IKEA Latin Bold";
+    font-family: "Noto IKEA Latin Bold", serif;
+}
+
+/* ------ animazione icona go-shopping in hero-section */
+.hero-section .go-shopping footer .ico {
+    rotate: 0deg;
+    transition: rotate 0.4s ease;
+}
+.hero-section .go-shopping footer .spin {
+    rotate: 180deg;
+    transition: rotate 0.4s ease;
 }
 /* -------- fine hero section boxes ilyas macaluso */
 
@@ -316,7 +326,7 @@ p {
     align-items: flex-end;
     height: 60%;
     width: 100%;
-    padding: 1.5rem 12% 1.5rem 0rem;
+    padding: 1.5rem 12% 1.5rem 0;
     color: white;
     transition: 500ms transform ease;
     /* transform: translateX(-64px);
@@ -505,7 +515,7 @@ p {
 }
 
 .carousel .right-items .hidden,
-.carousel .right-items .hidden{
+.carousel .right-items .hidden {
     opacity: 0;
 }
 .carousel .right-items .button-right:hover,
@@ -545,7 +555,7 @@ p {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    height: calc(100% -1rem);
+    height: calc(100% - 1rem);
     margin-bottom: 1rem;
     border-radius: var(--border-radius-def);
     background-color: var(--color-background);
@@ -570,7 +580,7 @@ p {
 }
 .carousel .card .bottom-items h3 {
     font-size: 1rem;
-    font-family: "Noto IKEA Latin Bold";
+    font-family: "Noto IKEA Latin Bold", serif;
     line-height: 140%;
 }
 .carousel .card .bottom-items p {
@@ -625,9 +635,7 @@ p {
         padding: 0 1.875rem;
         font-size: 1.5625rem;
         line-height: 120%;
-        margin: 1rem 0;
         letter-spacing: -0.03375rem;
-        margin: 0;
     }
     .hero-section .go-shopping footer {
         padding: 0 1.875rem;
@@ -686,9 +694,9 @@ p {
     }
     .hero-section {
         grid-template-columns: calc(60vw - 2rem) 1fr;
-        grid-template-rows: calc(60vw - 2rem);
-        height: fit-content;
-        max-height: fit-content;
+        grid-template-rows: 1fr;
+        min-height: 28.15rem;
+        max-height: calc(100vh - (var(--nav-height) + var(--grid-gap)));
     }
     .box-hero {
         grid-column: 1;
@@ -698,6 +706,12 @@ p {
     }
     .hero-section .go-shopping > header {
         padding: 0 1.25rem;
+    }
+    .hero-section .go-shopping .center-items {
+        height: 210%;
+    }
+    .hero-section .go-shopping .center-items-hidden {
+        height: 0;
     }
 
     /* -------- rimozione animazioni freccetta */
@@ -725,126 +739,160 @@ p {
 }
 
 @media screen and (max-width: 860px) {
-  .hero-section {
-      grid-template-columns: calc(60vw - 2rem) 1fr;
-      grid-template-rows: 1fr;
-      height: fit-content;
-  }
-  .box-hero {
-      grid-column: 1;
-  }
-  .hero-section .go-shopping {
-      grid-column: 2;
-  }
+    .hero-section {
+        grid-template-columns: calc(60vw - 2rem) 1fr;
+    }
+    .box-hero {
+        grid-column: 1;
+    }
+    .hero-section .go-shopping {
+        grid-column: 2;
+    }
 }
 
 /* -------- media query 768px mobile mode */
 @media screen and (max-width: 768px) {
-  /*                   inizio-layout */
-  .sections-container {
-    padding: 0 1rem;
-  }
-  .box-container-2-col,
-  .box-container-1-col,
-  .hero-section {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+    /*                   inizio-layout */
+    .sections-container {
+        padding: 0 1rem;
+    }
+    .hero-section {
+        height: fit-content;
+        max-height: none;
+    }
+    .box-container-2-col,
+    .box-container-1-col,
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+    .box-hero {
+        grid-column: 1;
+    }
+    .hero-section .go-shopping {
+        grid-column: 1;
+        justify-content: flex-start;
+        height: fit-content;
+    }
+    .hero-section .go-shopping > header {
+        height: fit-content;
+        padding: 2rem 1rem;
+    }
+    .hero-section .go-shopping footer {
+        padding: 2rem 1rem;
+    }
 
-  .protrait-two-col,
-  .box-fancy,
-  .box-standard,
-  .square-two-col
-   {
-    height: 100vw;
-  }
+    .hero-section .go-shopping .center-items {
+        height: calc((2.5rem * 6) + (0.6rem * 2) + 48px);
+        margin: 1.25rem;
+        padding: 0.6rem;
+    }
+    .hero-section .go-shopping .region-selector {
+        overflow-y: hidden;
+    }
 
-  .drop-container {
-    display: flex;
-    flex-direction: row;
-  }
+    .hero-section .go-shopping .center-items-hidden {
+        margin: 0 1.25rem;
+        padding: 0 0.6rem;
+        height: 0;
+    }
+    .hero-section .go-shopping .center-items .region-selector {
+        overflow: hidden;
+    }
+    .hero-section .go-shopping .center-items .item {
+        width: 100%;
+    }
+    .protrait-two-col,
+    .box-fancy,
+    .box-standard,
+    .square-two-col,
+    .box-hero {
+        height: 100vw;
+    }
 
-  .box-fancy {
-    display: flex;
-    align-items: flex-end;
-  }
+    .drop-container {
+        display: flex;
+        flex-direction: row;
+    }
 
-  .box-fancy .right-items {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: fit-content;
-    min-width: 100%;
-    background: transparent;
-  }
+    .box-fancy {
+        display: flex;
+        align-items: flex-end;
+    }
 
-  .drop
-  {
-    width: 100%;
-    height: 45vw;
-  }
+    .box-fancy .right-items {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: fit-content;
+        min-width: 100%;
+        background: transparent;
+    }
 
-  .drop-container .box,
-  .carousel {
-    height: 50vw;
-  }
+    .drop {
+        width: 100%;
+        height: 45vw;
+    }
 
-  .stretch-box {
-    display: grid;
-    margin-left: 0;
-    padding: 0;
-  }
+    .drop-container .box,
+    .carousel {
+        height: 50vw;
+    }
 
-  .carousel {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: fit-content;
-    padding: 3.75rem 0 3.75rem 2.25rem;
-  }
+    .stretch-box {
+        display: grid;
+        margin-left: 0;
+        padding: 0;
+    }
 
-  .carousel .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1rem
-  }
+    .carousel {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: fit-content;
+        padding: 3.75rem 0 3.75rem 2.25rem;
+    }
 
-  .carousel .left-items {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    min-width: 100%;
-  }
+    .carousel .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
 
-  
-  /*                   fine-layout */
+    .carousel .left-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        min-width: 100%;
+    }
 
-  /*                   inizio-testo */
+    /*                   fine-layout */
 
-  .text {
-    font-size: 0.75rem;
-  }
+    /*                   inizio-testo */
 
-  .title-medium {
-    font-size: 1.25rem;
-  }
+    .text {
+        font-size: 0.75rem;
+    }
 
-  .title-big {
-    font-size: 1.25rem;
-  }
+    .title-medium {
+        font-size: 1.25rem;
+    }
 
-  .title-bigger {
-    font-size: 1.5625rem;
-  }
+    .title-big {
+        font-size: 1.25rem;
+    }
 
-  .text .drop-h2 {
-    font-size: 1.25rem;
-  }
+    .title-bigger {
+        font-size: 1.5625rem;
+    }
 
-  .box .drop-items .text {
-    font-size: 0.75rem;
-  }
+    .text .drop-h2 {
+        font-size: 1.25rem;
+    }
 
-  /*                   fine-testo */
+    .box .drop-items .text {
+        font-size: 0.75rem;
+    }
+
+    /*                   fine-testo */
 }

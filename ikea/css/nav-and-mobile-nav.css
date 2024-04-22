@@ -491,3 +491,9 @@
         align-items: center;
     }
 }
+@media screen and (max-width: 47.9375rem) {
+    :root{
+        --nav-height: 4.25rem;
+    }
+}
+

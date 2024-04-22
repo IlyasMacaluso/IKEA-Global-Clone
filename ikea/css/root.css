@@ -8,7 +8,7 @@
     --border-radius-def: 8px;
     --box-container-max-width: 90rem;
     --grid-gap: 1.25rem;
-    
+
     /*sliding boxes*/
     --box-animation-duration: 1s;
     --box-animation-delay: 0.3s;
@@ -46,6 +46,7 @@
     src: url("https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-400.latin.647e877d.woff2")
         format("woff2");
 }
+
 @font-face {
     font-family: "Noto IKEA Latin Bold";
     src: url("https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-700.latin.d7277c39.woff2")

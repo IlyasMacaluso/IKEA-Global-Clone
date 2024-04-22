@@ -31,3 +31,8 @@ document.addEventListener("scroll", () => {
     slideAnimation(carousels)
 })
 
+window.addEventListener("resize", () => {
+    slideAnimation(boxes)
+    slideAnimation(boxesFancy)
+    slideAnimation(carousels)
+})
