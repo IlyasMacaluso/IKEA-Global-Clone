@@ -10,8 +10,7 @@
     --grid-gap: 1.25rem;
 
     /*sliding boxes*/
-    --box-animation-duration: 1s;
-    --box-animation-delay: 0.3s;
+    --box-animation-duration: .6s;
 
     /* altezza elementi */
     --nav-height: 6rem;

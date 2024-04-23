@@ -649,9 +649,6 @@ p {
     }
 
     /* --------- modifiche dimensioni / padding box */
-    .drop-container {
-        padding: 1rem;
-    }
     .sections-container {
         padding: 0 1rem;
     }
@@ -706,6 +703,7 @@ p {
         grid-template-columns: calc(60vw - 2rem) 1fr;
         grid-template-rows: 1fr;
         height: var(--protrait-two-col);
+        width: 100%;
     }
     .box-hero {
         grid-column: 1;
@@ -720,9 +718,8 @@ p {
     /*                   inizio-layout */
     :root {
         --protrait-two-col: calc(calc(100vw - 2rem) * 1.1);
-        --square-two-col: calc(100vw - 2rem);
-        --animation-duration: 800ms;
-        --animation-delay: 0;
+        --square-two-col:calc(100vw - 2rem);
+
     }
     .sections-container {
         padding: 0 1rem;
@@ -739,8 +736,9 @@ p {
         height: var(--square-two-col);
     }
     .hero-section {
-        height: fit-content;
+        height:max-content;
         max-height: none;
+        align-items: start;
     }
     .hero-section .go-shopping {
         grid-column: 1;
