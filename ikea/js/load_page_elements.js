@@ -1,17 +1,26 @@
-const deskNavTag = document.querySelector(".navbar")
-const mobNavTag = document.querySelector(".mobile-nav")
-const footTag = document.querySelector(".body-footer")
-const headTag = document.querySelector("head")
-const bodyTag = document.querySelector("body")
+// fetch('navbar.html')
+//     .then(response => response.text())
+//     .then(navbar => {
+//         fetch('footer.html')
+//             .then(response => response.text())
+//             .then(footer => {
+//                 document.body.innerHTML = navbar+footer;
+//             })
+//     });
+const deskNavTag = document.getElementById('navbar')
+const mobNavTag = document.getElementById("mobile-navbar")
+const footTag = document.getElementById("body-footer")
+const headTag = document.head
+const bodyTag = document.body
 
 bodyTag.setAttribute("style", "display: none")
 
 async function loadElements() {
     try {
         const res1 = await fetch("head.html")
-        const res2 = await fetch("desktop-nav.html")
+        const res2 = await fetch("pages/nav.html")
         const res3 = await fetch("mobile-nav.html")
-        const res4 = await fetch("footer.html")
+        const res4 = await fetch("pages/footer.html")
 
         const headData = await res1.text()
         const deskNavData = await res2.text()
@@ -45,21 +54,3 @@ function loadScripts() {
     ])
 }
 
-// Funzione per caricare uno script
-function fetchScript(url) {
-    return new Promise((resolve, reject) => {
-        const script = document.createElement("script")
-        script.src = url
-        script.onload = resolve
-        script.onerror = reject
-        document.body.appendChild(script) // Aggiungi lo script al body
-    })
-}
-
-window.addEventListener("load", () => {
-    loadElements()
-    // per caricare la pagina dopo che i cambiamenti sono stati applicati
-    setTimeout(() => {
-        bodyTag.setAttribute("style", "opacity: 1")
-    }, 100)
-})
