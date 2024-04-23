@@ -1,8 +1,8 @@
 .box-animation-paused {
-    transform: translateY(16rem);
-    transition: transform .6s ease-out;
+    transform: translateY(12rem);
+    transition: transform .8s ease-out;
 }
 .box-animation-start {
     transform: translateY(0);
-    transition: transform .6s ease-out;
+    transition: transform .8s ease-out;
 }

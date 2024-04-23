@@ -9,7 +9,8 @@ function slideAnimation(node) {
         const rectTop = element.getBoundingClientRect().top
         if (rectTop > window.innerHeight) {
             element.classList.add("box-animation-paused")
-        } else if (rectTop < window.innerHeight + window.innerHeight * 0.2) {
+        } 
+        if (rectTop < window.innerHeight + window.innerHeight * 0.2) {
             element.classList.add("box-animation-start")
         }
     })
