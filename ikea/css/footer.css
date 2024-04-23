@@ -218,9 +218,3 @@
     border-radius: 2;
   }
 }
-
-#clock canvas {
-  border: 1px solid var(--color-ikea-line);
-  width: 200px;
-  height: 200px;
-}
